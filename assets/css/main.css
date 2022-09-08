@@ -16,3 +16,19 @@ body {
   h1, h2 {
     font-family: 'Crimson Pro', serif;
   }
+
+
+/* Gallery */
+
+#gallery {
+line-height:0;
+/* TODO reduce the col count in smaller screens a resize < 1000px makes the images too small */
+column-count:5;
+column-gap:5px;
+}
+
+#gallery img {
+width: 100% !important;
+height: auto !important;
+margin-bottom: 5px;
+}
