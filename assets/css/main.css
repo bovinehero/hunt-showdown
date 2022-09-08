@@ -1,1 +1,18 @@
 /* Main stylesheet for the site included in every page */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&family=Open+Sans:wght@300&display=swap');
+
+/* Reset all the things */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2 {
+    font-family: 'Crimson Pro', serif;
+  }

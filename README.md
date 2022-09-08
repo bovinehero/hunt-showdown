@@ -37,6 +37,24 @@ As a current player I would like to know of upcoming events, features and commun
 Overview of implemented tech
 
 ## Existing Features
+
+### Fonts
+
+For the headings font I selected __Crimson Pro__, as it is based on an updated version of the __Crimson Text__ serif typeface used on the Hunt Showdown [website](https://www.huntshowdown.com/).
+
+This way I could keep within the theme of the site without directly copying it.
+
+```
+font-family: 'Crimson Pro', serif;
+```
+
+The font selected for the main body was selected for readibility, with a sans-serif being optimal for screens I selected __Open Sans__ as it designed for legibility across print, web, and mobile interfaces.
+
+```
+font-family: 'Open Sans', sans-serif;
+```
+
+## Existing Features
 What I built
 
 
