@@ -1,6 +1,26 @@
 # Hunt Showdown
 
-This site is a fake hunt marketing site for the popular battle-royal & PVE game [Hunt Showdown](https://www.huntshowdown.com/) built in CSS anf HTML. 
+This site is a fake hunt marketing site for the popular battle-royal & PVE game [Hunt Showdown](https://www.huntshowdown.com/) built in CSS anf HTML.
+
+As a four marketing site the main goal is to focus on a media heavy approach, as typically large blocks of texts do not aide sales.
+
+## index.html
+
+To function as the langing page. 
+This contains the eye candy animation in adition to video media, additionally as a marketing site a purchase call to action to purchase at the base of the page.
+
+## store.html 
+
+Static gallerys with uniform images with links out to purchase the games different editions and DLC content
+
+## gallery.html
+
+Flexible gallery of image content that includes social media, concept art and screenshots.
+
+## signup.html
+
+A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
+
 
 (ADD MORE)
 
