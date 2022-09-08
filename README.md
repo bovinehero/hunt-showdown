@@ -82,3 +82,5 @@ Special thanks for folks
 Google Fonts for the fonts
 
 Font Awesome for the icons
+
+Crytek for the game footage and the presspack
