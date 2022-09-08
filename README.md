@@ -77,4 +77,8 @@ unfixed bugs
 
 # Credits
 
-Special chanks for folks
+Special thanks for folks
+
+Google Fonts for the fonts
+
+Font Awesome for the icons
