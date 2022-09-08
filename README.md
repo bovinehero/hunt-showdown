@@ -21,6 +21,15 @@ Flexible gallery of image content that includes social media, concept art and sc
 
 A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
 
+## User Stories
+
+As a potential player of this game I would like to know more about it in order to make a decision should I buy it
+
+As a potential buyer of this game I would like to be able to purchase this game
+
+As a current player I would like to know of upcoming events, features and community events
+
+
 
 (ADD MORE)
 
