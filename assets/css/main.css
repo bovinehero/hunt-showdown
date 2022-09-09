@@ -44,7 +44,7 @@ h1, h2 {
 #product {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: space-around;
   background-color: silver;
 }
 
@@ -53,6 +53,7 @@ h1, h2 {
   margin: 10px;
   width: 700px;
   padding: 20px;
+  align-self: center;
 }
 
 #buy-the-game {
