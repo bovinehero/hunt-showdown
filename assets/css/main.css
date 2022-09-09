@@ -13,12 +13,55 @@ body {
     font-family: 'Open Sans', sans-serif;
   }
   
-  h1, h2 {
+h1, h2 {
     font-family: 'Crimson Pro', serif;
   }
 
 
+#testimonials {
+  display: flex;
+  /* change to column in responsive modes as needed */
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: navy;
+}
 
+#testimonials > div {
+  background-color: rosybrown;
+  margin: 10px;
+  width: 330px;
+  padding: 20px;
+}
+
+#media-section {
+  display: flex;
+  /* change to column in responsive modes as needed */
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: magenta;
+}
+
+#product {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background-color: silver;
+}
+
+#product > div {
+  background-color: rosybrown;
+  margin: 10px;
+  width: 700px;
+  padding: 20px;
+}
+
+#buy-the-game {
+  display: flex;
+  /* change to column in responsive modes as needed */
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: sienna;
+}
 /* Store - uses flexbox */
 
 #games {
