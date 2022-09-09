@@ -16,6 +16,10 @@ body {
     min-height: 100vh;
   }
   
+.content-container{
+  width: 100%;
+}
+
 h1, h2 {
     font-family: 'Crimson Pro', serif;
   }
@@ -184,11 +188,9 @@ header a {
 
 #buy-the-game {
   display: flex;
-  /* flex-flow: row wrap; */
   justify-content: center;
   background-color: sienna;
-  padding: 20px;
-
+  padding: 50px;
 }
 
 /* Store */
@@ -361,7 +363,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background-color: aqua;
+  background-color: transparent;
   position: absolute;
   width: 100%;
   right: 0;
