@@ -29,8 +29,21 @@ h1, h2 {
 #testimonials > div {
   background-color: rosybrown;
   margin: 10px;
+  height: 210px;
   width: 330px;
   padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#testimonials h3 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px;
+}
+
+#testimonials p {
+  font-style: italic;
 }
 
 #media-section {
