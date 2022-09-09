@@ -17,6 +17,83 @@ h1, h2 {
     font-family: 'Crimson Pro', serif;
   }
 
+/* Banner Image and Cover text */
+
+#banner {
+  height: 400px;
+  width: 1800px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  margin: 20px;
+}
+
+#banner-image {
+  height: 400px;
+  width: 1800px;
+  background: url('../images/at-gun-point.jpg') no-repeat center center;
+  animation-name: banner-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  margin: 0 auto;
+}
+
+/* create the zoom out for banner image */
+
+#banner-cover-text{
+  letter-spacing: 4px;
+  width: 400px;
+  height: 150px;
+  padding-top: 10px;
+  padding-left: 10px;
+  bottom: 10px;
+  left: 40px;
+  position: absolute;  
+}
+
+#banner-cover-text h2 {
+  margin-bottom: 6px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+  font-size: 240%;
+}
+
+#banner-cover-text h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 125%;
+
+}
+
+#banner-cover-text h3 span {
+  /* animates color in effect on loading page */
+  animation-name: banner-cover-colors;
+  animation-duration: 5s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes banner-zoom {
+  from {
+      transform: scale(1.4);
+      background-size: cover;
+  }
+
+  to {
+      transform: scale(1.0);
+      background-size: cover;
+  }
+}
+
+@keyframes banner-cover-colors {
+  from{
+      opacity: 1;
+  }
+  to{
+      color:red;
+      opacity: 1;
+  }
+}
 
 #testimonials {
   display: flex;
