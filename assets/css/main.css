@@ -32,8 +32,8 @@ body {
 #games > div {
   background-color: rosybrown;
   margin: 10px;
+  width: 400px;
   padding: 20px;
-  font-size: 30px;
 }
 
 #dlc {
@@ -47,11 +47,66 @@ body {
 #dlc > div {
   background-color: grey;
   margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+  width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
 
+.purchase-header{
+  padding: 10px;
+  background-color: chartreuse;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.purchase-body{
+  height: 240px;
+}
+
+.purchase-body-game{
+  height: 200px;
+}
+
+.purchase-footer{
+  padding: 10px;
+  background-color: peru;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#std-edition{
+  background: url('../images/store/hunt-showdown-game.jpeg') no-repeat center center, black;
+}
+#collector-edition{
+  background: url('../images/store/hunt-showdown-game-collector-edition.jpeg') no-repeat center center, black;
+}
+
+#p-daughter{
+  background: url('../images/store/hunt-showdown-the-prodigal-daughter.jpeg') no-repeat center center, black;
+}
+#ronin{
+  background: url('../images/store/hunt-showdown-ronin.jpeg') no-repeat center center, black;
+}
+#lawless{
+  background: url('../images/store/hunt-showdown-the-lawless.jpeg') no-repeat center center, black;
+}
+#cain{
+  background: url('../images/store/hunt-showdown-cain.jpeg') no-repeat center center, black;
+}
+#trick-shot{
+  background: url('../images/store/hunt-showdown-trick-shooter.jpeg') no-repeat center center, black;
+}
+#lonely-howl{
+  background: url('../images/store/hunt-showdown-lonely-howl.jpeg') no-repeat center center, black;
+}
+#azure-arsenal{
+  background: url('../images/store/hunt-showdown-azure-arsenal.jpeg') no-repeat center center, black;
+}
+#revenant{
+  background: url('../images/store/hunt-showdown-the-revenant.jpeg') no-repeat center center, black;
+}
 
 
 /* Gallery uses columns */
