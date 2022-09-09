@@ -44,6 +44,7 @@ h1, h2 {
 #media-section iframe {
   width: 1020px;
   height: 630px;
+  margin: 20px;
 }
 
 #product {
