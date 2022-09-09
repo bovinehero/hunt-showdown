@@ -64,12 +64,14 @@ h1, h2 {
 
 #buy-the-game {
   display: flex;
-  /* change to column in responsive modes as needed */
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   justify-content: center;
   background-color: sienna;
+  padding: 20px;
+
 }
-/* Store - uses flexbox */
+
+/* Store */
 
 #games {
   display: flex;
@@ -109,6 +111,8 @@ h1, h2 {
   background-color: chartreuse;
   font-size: 1rem;
   text-align: center;
+  max-width: 460px;
+
 }
 
 .purchase-body{
@@ -119,11 +123,17 @@ h1, h2 {
   height: 200px;
 }
 
+.purchase-body-home{
+  height: 215px;
+  width: 460px;
+}
+
 .purchase-footer{
   padding: 10px;
   background-color: peru;
   font-size: 1rem;
   text-align: center;
+  max-width: 460px;
 }
 
 #std-edition{
