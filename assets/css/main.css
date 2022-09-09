@@ -12,6 +12,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: red;
+    position: relative;
+    min-height: 100vh;
   }
   
 h1, h2 {
@@ -360,6 +362,10 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   background-color: aqua;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
 }
  
 footer > div {
