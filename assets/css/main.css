@@ -323,3 +323,25 @@ margin-bottom: 5px;
   background-color: black;
   color: white;
 }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: aqua;
+}
+ 
+footer > div {
+  background-color: rosybrown;
+  margin: 10px;
+}
+
+footer > ul {
+  list-style-type: none;
+}
+
+footer li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 5px;
+}
