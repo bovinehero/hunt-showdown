@@ -11,11 +11,39 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: red;
   }
   
 h1, h2 {
     font-family: 'Crimson Pro', serif;
   }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+  font-family: 'Crimson Pro', serif;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#logo img{
+  width: 200px;
+}
+
+.active {
+  border-bottom: 1px solid;
+}
 
 /* Banner Image and Cover text */
 
@@ -323,6 +351,9 @@ margin-bottom: 5px;
   background-color: black;
   color: white;
 }
+
+
+/* Footer */
 
 footer {
   display: flex;
