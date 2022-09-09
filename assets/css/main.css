@@ -41,6 +41,11 @@ h1, h2 {
   background-color: magenta;
 }
 
+#media-section iframe {
+  width: 1020px;
+  height: 630px;
+}
+
 #product {
   display: flex;
   flex-flow: column wrap;
