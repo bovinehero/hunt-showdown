@@ -52,6 +52,11 @@ header a {
 /* Banner Image and Cover text */
 
 #banner {
+  display: flex;
+  justify-content: center;
+}
+
+#banner-wrapper {
   height: 400px;
   width: 1800px;
   overflow: hidden;
