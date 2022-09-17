@@ -101,7 +101,7 @@ header a {
   /* animates color in effect on loading page */
   animation-name: banner-cover-colors;
   animation-duration: 5s;
-  animation-delay: 4s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -221,7 +221,8 @@ header a {
   font-size: 1rem;
   text-align: center;
   max-width: 460px;
-
+  background-color: rgba(60, 60, 60, 0.6);
+  color:blanchedalmond
 }
 
 .purchase-body{
@@ -242,6 +243,12 @@ header a {
   font-size: 1rem;
   text-align: center;
   max-width: 460px;
+  background-color: rgba(136, 8, 8, 0.6);
+  text-transform: uppercase;
+}
+.purchase-footer a {
+  color: blanchedalmond;
+  text-decoration: none;
 }
 
 #std-edition{
