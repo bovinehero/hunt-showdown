@@ -4,39 +4,37 @@ This site is a fake hunt marketing site for the popular battle-royal & PVE game 
 
 As a four marketing site the main goal is to focus on a media heavy approach, as typically large blocks of texts do not aide sales.
 
-## index.html
-
-To function as the langing page. 
-This contains the eye candy animation in adition to video media, additionally as a marketing site a purchase call to action to purchase at the base of the page.
-
-## store.html 
-
-Static gallerys with uniform images with links out to purchase the games different editions and DLC content
-
-## gallery.html
-
-Flexible gallery of image content that includes social media, concept art and screenshots.
-
-## signup.html
-
-A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
-
 ## User Stories
 
-As a potential player of this game I would like to know more about it in order to make a decision should I buy it
+1. As a potential player of this game I would like to know more about it in order to make a decision should I buy it
+2. As a future player of this game I would like to be able to be able to go and purchase this game from the site
+3. As a current player I would like to be informed of upcoming events, features and community events
 
-As a potential buyer of this game I would like to be able to purchase this game
+## Design Considerations
 
-As a current player I would like to know of upcoming events, features and community events
+As the primary plaform for this video game is PC one would assume that more views would be from a desktop rather than a mobile phone, thus a desktop first approach was implemented.
 
-
-
-(ADD MORE)
+Hunt is an atmospheric horror game, the color pallette needs to be dark to enhance the hidden threat with contrast coming from lighter text and highlights to calls to action.
 
 # Features
-Overview of implemented tech
 
-## Existing Features
+## Design Considerations
+
+As the primary plaform for this video game is PC one would assume that more views would be from a desktop rather than a mobile phone, thus a desktop first approach was implemented.
+
+Hunt is an atmospheric horror game, the color pallette needs to be dark to enhance the hidden threat with contrast coming from lighter text and highlights to calls to action.
+
+## Global Features
+
+### Colors
+
+In order to create a pitch dark, dead of night feeling a full black background is set as the base background. This allows a build up of elements to establish mood and calls to action can be easily defined with bright coloration. 
+
+As the theme of the game is occult, blood and bone colors make a logical choice for the calls to action and base text.
+
+For the default font color blanchedalmond was selected as it's off white shade provides adequete contrast to the black and red and gives without feeiling monchromatic.
+
+An almost blood red `#880808` gives an appropriate feel to the site while providing significant contrast that it can be used in both white and black color situations.
 
 ### Fonts
 
@@ -54,12 +52,35 @@ The font selected for the main body was selected for readibility, with a sans-se
 font-family: 'Open Sans', sans-serif;
 ```
 
-## Existing Features
-What I built
+## Page Specific Features
 
+### index.html
+
+To function as the langing page. Information about the product, includes a purchase call to action as well as media elements.
+
+### store.html 
+
+Flex based gallery with uniform images with links out to purchase the games different editions and DLC content
+
+### gallery.html
+
+Column based gallery of image content that includes social media, concept art and screenshots.
+
+### signup.html
+
+A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
 
 ## Features Left to Implement
-What still to add
+
+### Responsive styles
+
+CIP1-10 add core styles: TODO implement responsive modes for the site
+
+### Things that needed Javascript
+
+The signup page currently bounces it's request off of the CI testing API, a future enhancement would be deal with this in the page.
+
+Change the signup page to be Modal launched as a discreet call to action that scrolls with the user. I was unable to work out how to implement a modal without JavaScript
 
 # Testing
 
