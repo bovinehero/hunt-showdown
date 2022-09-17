@@ -409,3 +409,38 @@ footer li {
 footer i {
   color: blanchedalmond;
 }
+
+@media screen and (max-width: 480px) {
+  /* 320px — 480px: Mobile devices */
+  body {
+    background-color: brown;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 481px — 768px: iPads, Tablets */
+  body {
+    background-color: brown;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* 769px — 1024px: Small screens, laptop */
+  body {
+    background-color: brown;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* 1025px — 1200px: Desktops, large screens */
+  body {
+    background-color: brown;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  /* 1201px and more —  Extra large screens, TV */
+  body {
+    background-color: brown;
+  }
+}
