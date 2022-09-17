@@ -297,7 +297,11 @@ margin-bottom: 5px;
 .form-section {
     clear: left;
     /* 700 looks like the the minimum height without footer over-run */
-    height: 600px;
+    height: 700px;
+    max-width: 100%;
+    background: url("../images/signup-form.jpg");
+    background-size: cover;
+    background-position: center;
   }
 
 .signup-form {
@@ -305,7 +309,7 @@ margin-bottom: 5px;
   background-color: rgba(60, 60, 60, 0.6);
   max-width: 400px;
   position: absolute;
-  left: 10%;
+  left: 20%;
   padding: 30px;
 }
 
@@ -315,15 +319,34 @@ margin-bottom: 5px;
 
 .text-input, .date-input {
   background: transparent;
+  outline: none;
   width: 100%;
   height: 25px;
   margin: 5px 0 20px 0;
   border: 1px solid;
   border-radius: 2px;
+  color:blanchedalmond;
 }
 
 .text-input:hover, .date-input:hover {
-  border-color: red;
+  border-color: black;
+}
+
+
+.text-input:autofill {
+  border: 3px solid black;
+  background-color: black;
+  color:blanchedalmond;
+}
+
+.text-input:-webkit-autofill {
+  border: 3px solid black;
+  background-color: black;
+  color:blanchedalmond;
+}
+
+.text-input:focus, .date-input:focus {
+  background-color: black;
 }
 
 .join-button {
@@ -332,14 +355,14 @@ margin-bottom: 5px;
   padding: 15px 32px 15px 32px;
   text-align: center;
   background-color: black;
-  color: white;
+  color: blanchedalmond;
   display: block;
   float: right;
 }
 
 .join-button:hover {
   background-color: black;
-  color: white;
+  color: blanchedalmond;
 }
 
 
