@@ -377,6 +377,7 @@ footer {
   width: 100%;
   right: 0;
   bottom: 0;
+  color: blanchedalmond;
 }
  
 footer > div {
@@ -391,4 +392,8 @@ footer li {
   display: inline;
   list-style-type: none;
   padding-right: 5px;
+}
+
+footer i {
+  color: blanchedalmond;
 }
