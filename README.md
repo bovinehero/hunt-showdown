@@ -70,6 +70,18 @@ Column based gallery of image content that includes social media, concept art an
 
 A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
 
+### 404.html
+
+A functional page that will return when a user tries to follow a link to a non existant resource.
+
+This page leverages the github pages jekyll engine to provide a custom 404 experience for users. 
+
+The styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
+
+Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if child directories are inputted into the url..
+
+The styles are a reuse of the body styles in the main.css
+
 ## Features Left to Implement
 
 ### Responsive styles
