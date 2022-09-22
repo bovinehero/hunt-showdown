@@ -140,20 +140,15 @@ header a {
 }
 
 #testimonials > div {
-  margin: 10px;
-  height: 210px;
-  width: 330px;
-  padding: 20px;
-  display: flex;
-  flex-flow: column wrap;
+  gap: 20px;
+  display: block;
+  flex: 0 0 330px;
+  margin: 10px 20px;
 }
 
 #testimonials > div:first-child {
   flex: 1 0 100%;
   text-transform: uppercase;
-  margin: 10px;
-  height: 20px;
-  padding: 10px;
   text-align: center;
 }
 
