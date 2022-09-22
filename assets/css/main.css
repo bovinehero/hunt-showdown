@@ -385,7 +385,7 @@ margin-bottom: 5px;
 
 /* Footer */
 
-footer {
+#foot-social-media {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -395,23 +395,24 @@ footer {
   right: 0;
   bottom: 0;
   color: blanchedalmond;
+  align-items: baseline;
 }
  
-footer > div {
+#foot-social-media > div {
   margin: 10px;
 }
 
-footer > ul {
+#foot-social-media ul {
   list-style-type: none;
 }
 
-footer li {
+#foot-social-media li {
   display: inline;
   list-style-type: none;
   padding-right: 5px;
 }
 
-footer i {
+#foot-social-media i {
   color: blanchedalmond;
 }
 
