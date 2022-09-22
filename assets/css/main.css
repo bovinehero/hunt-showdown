@@ -380,8 +380,7 @@ margin-bottom: 5px;
 
 
 /* Footer */
-
-#foot-social-media {
+footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -393,10 +392,27 @@ margin-bottom: 5px;
   color: blanchedalmond;
   align-items: baseline;
 }
- 
-#foot-social-media > div {
+
+/* #foot-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  color: blanchedalmond;
+  align-items: baseline;
+} */
+
+#foot-social-media, #foot-social-copyright {
   margin: 10px;
 }
+
+/* #foot-social-media {
+  margin: 10px;
+} */
 
 #foot-social-media ul {
   list-style-type: none;
