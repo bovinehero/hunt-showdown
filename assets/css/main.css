@@ -61,13 +61,12 @@ header a {
   width: 1800px;
   overflow: hidden;
   position: relative;
-  margin: 0 auto;
   margin: 20px;
 }
 
 #banner-image {
   height: 400px;
-  width: 1800px;
+  width: 100%;
   background: url('../images/at-gun-point.jpg') no-repeat center center;
   animation-name: banner-zoom;
   animation-duration: 5s;
@@ -80,11 +79,8 @@ header a {
 #banner-cover-text{
   letter-spacing: 4px;
   width: 400px;
-  height: 150px;
-  padding-top: 10px;
-  padding-left: 10px;
-  bottom: 10px;
-  left: 40px;
+  bottom: 20px;
+  left: 20px;
   position: absolute;  
 }
 
