@@ -251,7 +251,8 @@ header a {
   background-color: rgba(136, 8, 8, 0.6);
   text-transform: uppercase;
 }
-.purchase-footer a {
+
+.purchase-footer-a {
   color: blanchedalmond;
   text-decoration: none;
 }
