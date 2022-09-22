@@ -148,6 +148,15 @@ header a {
   flex-flow: column wrap;
 }
 
+#testimonials > div:first-child {
+  flex: 1 0 100%;
+  text-transform: uppercase;
+  margin: 10px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
 #testimonials h3 {
   text-transform: uppercase;
   text-align: center;
