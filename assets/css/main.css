@@ -444,3 +444,10 @@ footer i {
     background-color: brown;
   }
 }
+
+@media (prefers-reduced-motion) {
+  #banner-image {
+      animation-duration: 0s;
+    }
+  }
+  

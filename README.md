@@ -87,6 +87,7 @@ The styles are a reuse of the body styles in the main.css
 ### Responsive styles
 
 CIP1-10 add core styles: TODO implement responsive modes for the site
+CIP1-12 turn site into https site prior to final release
 
 ### Things that needed Javascript
 
