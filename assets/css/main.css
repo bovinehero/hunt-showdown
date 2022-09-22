@@ -154,7 +154,7 @@ header a {
   margin: 10px;
 }
 
-#testimonials p {
+#testimonials blockquote {
   font-style: italic;
 }
 
