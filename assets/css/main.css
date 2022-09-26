@@ -14,13 +14,47 @@ body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     min-height: 100vh;
-    font-size: 0.6rem;
     color: blanchedalmond;
     background: url('../images/page-background.jpg') no-repeat center bottom fixed, black;
   }
 
 
 /* Index */
+
+#testimonials {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#testimonials > div {
+  gap: 20px;
+  display: block;
+  flex: 0 0 330px;
+  margin: 10px 20px;
+}
+
+#testimonials > div:first-child {
+  flex: 1 0 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.3rem;
+}
+
+#testimonials h3 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.2rem;
+}
+
+#testimonials blockquote {
+  font-style: italic;
+  font-size: 1rem;
+}
+
 
 #media-section {
   display: flex;
@@ -47,9 +81,14 @@ body {
   font-size: 1rem;
 }
 
-#product > h2 {
+#product h2 {
   margin-bottom: 6px;
   align-self: center;
+  font-size: 1.5rem;
+  font-family: 'Crimson Pro', serif;
+}
+
+#product p {
   font-size: 1rem;
 }
 
