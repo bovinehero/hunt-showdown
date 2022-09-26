@@ -14,35 +14,49 @@ body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     min-height: 100vh;
-    font-size: 1rem;
+    font-size: 0.6rem;
     color: blanchedalmond;
     background: url('../images/page-background.jpg') no-repeat center bottom fixed, black;
   }
 
 
+/* Index */
+
+/* #product {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+} */
+
+/* #product > div {
+  margin: 10px;
+  width: 700px;
+  padding: 20px;
+  align-self: center;
+}
+*/
+#buy-the-game {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+
 /* Store Page */
 
-#games {
+#games, #dlc {
   display: flex;
-  /* change to column in responsive modes as needed */
   flex-flow: row wrap;
   justify-content: center;
 }
 
-#games > div {
+.purchase-game {
   margin: 10px;
   width: 400px;
   padding: 20px;
 }
 
-#dlc {
-  display: flex;
-  /* change to column in responsive modes as needed */
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-#dlc > div {
+.purchase-dlc {
   margin: 10px;
   width: 200px;
   display: flex;
@@ -204,8 +218,6 @@ margin-bottom: 5px;
   background-color: black;
   color: blanchedalmond;
 }
-
-
 
 
 /* Media resizes */
