@@ -565,6 +565,9 @@ footer {
   .signup-form {
     max-width: 30%;
   }
+  footer {
+    position: absolute;
+  }
 }
 
 @media (prefers-reduced-motion) {
