@@ -25,13 +25,13 @@ body {
 #media-section {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
 }
 
 #media-section iframe {
-  width: 256px;
-  height: 144px;
+  width: 384px;
+  height: 216px;
   margin: 20px;
 }
 
