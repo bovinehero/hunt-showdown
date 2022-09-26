@@ -20,6 +20,109 @@ body {
 
 
 /* Index */
+/* header {
+  width: 1800px;
+  max-width: 100%;
+  display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+} */
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(136, 8, 8, 0.9);
+}
+
+.logo {
+  display: inline-block;
+  z-index: 3;
+}
+
+
+.nav-menu{
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: blanchedalmond;
+    text-decoration: none;
+}
+.menu a:hover{
+    background-color: black;
+}
+.nav-menu{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+/* Toggle menu icon */
+.side-menu:checked ~ .nav-menu{
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+  z-index: 3;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+  z-index: 3;
+}
+/* Menu Icon */
+.hamb{
+  /* cursor: pointer; */
+  float: right;
+  padding: 40px 20px;
+}
+
+/* Style label tag */
+
+.hamb-line {
+  background: blanchedalmond;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+} 
+
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: blanchedalmond;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+
+.active {
+  border-bottom: 1px solid;
+}
 
 #banner {
   display: flex;
