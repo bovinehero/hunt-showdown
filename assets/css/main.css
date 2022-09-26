@@ -376,9 +376,8 @@ body {
 
 @media screen and (min-width: 1024px) {
   /* 769px — 1024px: Small screens, laptop */
-  body {
-    background-color: brown;
-  }
+  /* body {
+  } */
 
   #banner-wrapper {
     height: 460px;
@@ -397,9 +396,7 @@ body {
     animation-fill-mode: forwards;
     margin: 0 auto;
   }
-  
-  /* create the zoom out for banner image */
-  
+    
   #banner-cover-text{
     letter-spacing: 4px;
     max-width: 460px;
@@ -426,9 +423,6 @@ body {
 
 @media screen and (min-width: 1200px) {
   /* 1025px — 1200px: Desktops, large screens */
-  body {
-    background-color: purple;
-  }
   #media-section iframe {
     width: 1024px;
     height: 576px;
