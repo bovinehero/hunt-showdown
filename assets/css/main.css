@@ -350,6 +350,38 @@ body {
 }
 
 
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  color: blanchedalmond;
+  align-items: baseline;
+}
+
+#foot-social-media, #foot-social-copyright {
+  margin: 10px;
+}
+
+#foot-social-media ul {
+  list-style-type: none;
+}
+
+#foot-social-media li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 5px;
+}
+
+#foot-social-media i {
+  color: blanchedalmond;
+}
+
 /* Media resizes */
 
 @media screen and (min-width: 480px) {
