@@ -38,7 +38,7 @@ body {
 #buy-the-game {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 
@@ -52,8 +52,10 @@ body {
 
 .purchase-game {
   margin: 10px;
-  width: 400px;
+  max-width: 400px;
   padding: 20px;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
 .purchase-dlc {
@@ -64,34 +66,29 @@ body {
   justify-content: space-between;
 }
 
-
 .purchase-header{
   padding: 10px;
   font-size: 1rem;
   text-align: center;
-  max-width: 460px;
   background-color: rgba(60, 60, 60, 0.6);
   color:blanchedalmond
 }
 
-.purchase-body{
+.purchase-body-dlc{
   height: 240px;
+  max-width: 460px;
 }
 
 .purchase-body-game{
   height: 200px;
-}
-
-.purchase-body-home{
-  height: 215px;
-  width: 460px;
+  width: 360px;
 }
 
 .purchase-footer{
   padding: 10px;
   font-size: 1rem;
   text-align: center;
-  max-width: 460px;
+  max-width: 360px;
   background-color: rgba(136, 8, 8, 0.6);
   text-transform: uppercase;
 }
