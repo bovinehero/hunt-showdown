@@ -19,18 +19,123 @@ body {
     background: url('../images/page-background.jpg') no-repeat center bottom fixed, black;
   }
 
+
+/* Store Page */
+
+#games {
+  display: flex;
+  /* change to column in responsive modes as needed */
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#games > div {
+  margin: 10px;
+  width: 400px;
+  padding: 20px;
+}
+
+#dlc {
+  display: flex;
+  /* change to column in responsive modes as needed */
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#dlc > div {
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+
+.purchase-header{
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 460px;
+  background-color: rgba(60, 60, 60, 0.6);
+  color:blanchedalmond
+}
+
+.purchase-body{
+  height: 240px;
+}
+
+.purchase-body-game{
+  height: 200px;
+}
+
+.purchase-body-home{
+  height: 215px;
+  width: 460px;
+}
+
+.purchase-footer{
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 460px;
+  background-color: rgba(136, 8, 8, 0.6);
+  text-transform: uppercase;
+}
+
+.purchase-footer-a {
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+#std-edition{
+  background: url('../images/store/hunt-showdown-game.jpeg') no-repeat center center, black;
+}
+#collector-edition{
+  background: url('../images/store/hunt-showdown-game-collector-edition.jpeg') no-repeat center center, black;
+}
+
+#p-daughter{
+  background: url('../images/store/hunt-showdown-the-prodigal-daughter.jpeg') no-repeat center center, black;
+}
+#ronin{
+  background: url('../images/store/hunt-showdown-ronin.jpeg') no-repeat center center, black;
+}
+#lawless{
+  background: url('../images/store/hunt-showdown-the-lawless.jpeg') no-repeat center center, black;
+}
+#cain{
+  background: url('../images/store/hunt-showdown-cain.jpeg') no-repeat center center, black;
+}
+#trick-shot{
+  background: url('../images/store/hunt-showdown-trick-shooter.jpeg') no-repeat center center, black;
+}
+#lonely-howl{
+  background: url('../images/store/hunt-showdown-lonely-howl.jpeg') no-repeat center center, black;
+}
+#azure-arsenal{
+  background: url('../images/store/hunt-showdown-azure-arsenal.jpeg') no-repeat center center, black;
+}
+#revenant{
+  background: url('../images/store/hunt-showdown-the-revenant.jpeg') no-repeat center center, black;
+}
+
+
+
+/* Gallery */
+
 #gallery {
-  line-height: 0;
-  /* TODO reduce the col count in smaller screens a resize < 1000px makes the images too small */
-  column-count: 1;
-  column-gap: 5px;
-  }
-  
-  #gallery img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 5px;
-  }
+line-height: 0;
+column-count: 1;
+column-gap: 5px;
+}
+
+#gallery img {
+width: 100%;
+height: auto;
+margin-bottom: 5px;
+}
+
+/* Media resizes */
 
 @media screen and (min-width: 480px) {
   /* 320px — 480px: Mobile devices */
