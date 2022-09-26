@@ -119,8 +119,6 @@ body {
   background: url('../images/store/hunt-showdown-the-revenant.jpeg') no-repeat center center, black;
 }
 
-
-
 /* Gallery */
 
 #gallery {
@@ -135,6 +133,81 @@ height: auto;
 margin-bottom: 5px;
 }
 
+
+/* Signup */
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  max-width: 100%;
+  background: url("../images/signup-form.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-form {
+  background-color: rgba(60, 60, 60, 0.6);
+  padding: 30px;
+  margin: 10%;
+  max-width: 100%;
+}
+
+.signup-form > h2 {
+  margin-bottom: 20px;
+}
+
+.text-input, .date-input {
+  background: transparent;
+  outline: none;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid;
+  border-radius: 2px;
+  color:blanchedalmond;
+}
+
+.text-input:hover, .date-input:hover {
+  border-color: black;
+}
+
+.text-input:autofill {
+  border: 3px solid black;
+  background-color: black;
+  color:blanchedalmond;
+}
+
+.text-input:-webkit-autofill {
+  border: 3px solid black;
+  background-color: black;
+  color:blanchedalmond;
+}
+
+.text-input:focus, .date-input:focus {
+  background-color: black;
+}
+
+.join-button {
+  margin-top: 20px;
+  border-radius: 2px;
+  padding: 15px 32px 15px 32px;
+  text-align: center;
+  background-color: black;
+  color: blanchedalmond;
+  display: block;
+  float: right;
+}
+
+.join-button:hover {
+  background-color: black;
+  color: blanchedalmond;
+}
+
+
+
+
 /* Media resizes */
 
 @media screen and (min-width: 480px) {
@@ -146,6 +219,12 @@ margin-bottom: 5px;
   #gallery {
     column-count: 2;
     }
+  .form-section {
+    justify-content: flex-start;
+  }
+  .signup-form {
+    max-width: 60%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -155,7 +234,13 @@ margin-bottom: 5px;
   }
   #gallery {
     column-count: 3;
-    }
+  }
+  .form-section {
+    justify-content: flex-start;
+  }
+  .signup-form {
+    max-width: 40%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -166,6 +251,12 @@ margin-bottom: 5px;
   #gallery {
     column-count: 4;
     }
+  .form-section {
+    justify-content: flex-start;
+  }
+  .signup-form {
+    max-width: 30%;
+  }
 }
 
 @media (prefers-reduced-motion) {
