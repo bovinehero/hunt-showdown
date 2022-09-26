@@ -27,7 +27,7 @@ body {
 }
 
 #banner-wrapper {
-  height: 400px;
+  height: 300px;
   width: 1800px;
   overflow: hidden;
   position: relative;
@@ -35,7 +35,7 @@ body {
 }
 
 #banner-image {
-  height: 400px;
+  height: 100%;
   width: 100%;
   background: url('../images/at-gun-point.jpg') no-repeat center center;
   animation-name: banner-zoom;
@@ -43,7 +43,6 @@ body {
   animation-fill-mode: forwards;
   margin: 0 auto;
 }
-
 /* create the zoom out for banner image */
 
 #banner-cover-text{
@@ -59,12 +58,12 @@ body {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-transform: uppercase;
-  font-size: 240%;
+  font-size: 1.5rem;
 }
 
 #banner-cover-text h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 125%;
+  font-size: 1.2rem;
 }
 
 #banner-cover-text h3 span {
@@ -267,15 +266,15 @@ body {
 /* Gallery */
 
 #gallery {
-line-height: 0;
-column-count: 1;
-column-gap: 5px;
+  line-height: 0;
+  column-count: 1;
+  column-gap: 5px;
 }
 
 #gallery img {
-width: 100%;
-height: auto;
-margin-bottom: 5px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
 }
 
 
@@ -380,6 +379,35 @@ margin-bottom: 5px;
   body {
     background-color: brown;
   }
+
+  #banner-wrapper {
+    height: 460px;
+    width: 1800px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+  }
+  
+  #banner-image {
+    height: 100%;
+    width: 100%;
+    background: url('../images/at-gun-point.jpg') no-repeat center center;
+    animation-name: banner-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    margin: 0 auto;
+  }
+  
+  /* create the zoom out for banner image */
+  
+  #banner-cover-text{
+    letter-spacing: 4px;
+    max-width: 460px;
+    bottom: 40px;
+    left: 40px;
+    position: absolute;  
+  }
+
   #media-section iframe {
     width: 768px;
     height: 432px;
