@@ -37,7 +37,6 @@ header {
   font-size: 1.2rem;
 }
 
-
 .nav-menu{
   width: 100%;
   height: 60%;
@@ -263,6 +262,7 @@ header {
 #product p {
   font-size: 1rem;
   max-width: 1024px;
+  text-shadow: 1px 0 0 red, 0 -1px 0 red, 0 1px 0 red, -1px 0 0 red;
 }
 
 #buy-the-game {
@@ -332,7 +332,9 @@ header {
 #collector-edition{
   background: url('../images/store/hunt-showdown-game-collector-edition.jpeg') no-repeat center center, black;
 }
-
+#platinum-edition{
+  background: url('../images/store/hunt-showdown-game-platinum-edition.jpg') no-repeat center center, black;
+}
 #p-daughter{
   background: url('../images/store/hunt-showdown-the-prodigal-daughter.jpeg') no-repeat center center, black;
 }
@@ -568,6 +570,37 @@ footer {
   footer {
     position: absolute;
   }
+}
+
+@media screen and (min-width: 1920px) {
+
+  #testimonials {
+    justify-content: space-evenly;
+  }
+
+
+  #media-section iframe {
+    width: 1600px;
+    height: 900px;
+    margin: 20px;
+  }
+  
+  #product {
+    background: url('../images/assassin.jpg') no-repeat center center , black;
+    margin: 0 12%;
+    padding: 20px 0;
+  }
+
+  #product p {
+    font-size: 1rem;
+    max-width: 1024px;
+    text-shadow: 1px 0 0 black, 0 -1px 0 black, 0 1px 0 black, -1px 0 0 black;
+  }
+
+  #buy-the-game {
+    justify-content: space-evenly;
+  }
+
 }
 
 @media (prefers-reduced-motion) {
