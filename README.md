@@ -2,7 +2,7 @@
 
 This site is a fake hunt marketing site for the popular battle-royal & PVE game [Hunt Showdown](https://www.huntshowdown.com/) built in CSS anf HTML.
 
-As a four marketing site the main goal is to focus on a media heavy approach, as typically large blocks of texts do not aide sales.
+As a faux marketing site the main goal is to focus on a media heavy approach, as typically large blocks of texts do not aide sales.
 
 ## User Stories
 
@@ -12,19 +12,60 @@ As a four marketing site the main goal is to focus on a media heavy approach, as
 
 ## Design Considerations
 
-As the primary plaform for this video game is PC one would assume that more views would be from a desktop rather than a mobile phone, thus a desktop first approach was implemented.
+Initially I looked into building this site desktop first rather than a mobile first, however while this provide ample learning opertunities it was not condusive to good design practice as positioning and sizing became a common cause for code refactors. Ultimatley this led to a refactor the initial build into a mobile responsive site after I had created the base content in a larger viewing area.
 
-Hunt is an atmospheric horror game, the color pallette needs to be dark to enhance the hidden threat with contrast coming from lighter text and highlights to calls to action.
+Hunt is an atmospheric horror game, the color pallette needs to be dark to enhance the hidden threat with contrast coming from lighter text and highlights to calls to action. As a faux advertising site, text components should be a minimum reliance should be on pictures and graphics to help create the mood. This ensures that potential customers 
+
+### index.html
+
+> The Landing page. Information about the product, includes a purchase call to action as well as media elements.
+
+### store.html 
+
+> Flex based gallery with uniform images with links out to purchase the games different editions and DLC content
+
+### gallery.html
+
+> Column based gallery of image content that includes social media, concept art and screenshots.
+
+### signup.html
+
+> A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
+
+### 404.html
+
+> A functional page that will return when a user tries to follow a link to a non existant resource.
+
 
 # Features
 
-## Design Considerations
-
-As the primary plaform for this video game is PC one would assume that more views would be from a desktop rather than a mobile phone, thus a desktop first approach was implemented.
-
-Hunt is an atmospheric horror game, the color pallette needs to be dark to enhance the hidden threat with contrast coming from lighter text and highlights to calls to action.
-
 ## Global Features
+
+### Body Background
+
+To provide a clean experience I reset the `margin`, `padding` and set the `box-sizing` to `border-box` as per best practice in the [mdm web docs](https://developer.mozilla.org/en-US/docs/Learn/CSS). I also set the border to none, so that if I wanted to include borders I could create them from scratch.
+
+```
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+```
+
+Almost immediatley I decided that I wanted an atmospheric background image to fill the page and scroll with the user.
+I implemented this with the following code, which created a fallback of black in the areas that the image would not cover.
+
+```
+body {
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/page-background.jpg') no-repeat center bottom fixed, black;
+  }
+```
+
+This created the eerie lost in the dark forest effect I was going for in the background.
 
 ### Colors
 
@@ -32,9 +73,11 @@ In order to create a pitch dark, dead of night feeling a full black background i
 
 As the theme of the game is occult, blood and bone colors make a logical choice for the calls to action and base text.
 
-For the default font color blanchedalmond was selected as it's off white shade provides adequete contrast to the black and red and gives without feeiling monchromatic.
+For the default font color `blanchedalmond` was selected as it's off white shade provides adequete contrast to the black and red and gives without feeiling monchromatic.
 
 An almost blood red `#880808` gives an appropriate feel to the site while providing significant contrast that it can be used in both white and black color situations.
+
+The main drawback of this colour scheme is that some people cannot register red in their visual spectrum, this presents as a missing colour on the black end of the spectrum thus any use of the red coloration was contrasted with the lighter `blanchedalmond` in order to preserve accessibility.
 
 ### Fonts
 
@@ -52,41 +95,142 @@ The font selected for the main body was selected for readibility, with a sans-se
 font-family: 'Open Sans', sans-serif;
 ```
 
+> OpenDyslexic: a consideration for future projects
+
+I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style. 
+
+With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
+
+### Header
+
+The header comprised of 2 components the Logo and Navigation Bar. I elected to make this a sticky header so that it would scroll with the user as they traverse the site to provide continuous navigation options.
+
+#### Logo
+
+Originally I had planned to include a logo picture in the Header, however this was unweildy as the only images I could get that were suitable were pngs, an SVG asset would have provided auto scale regardless but eventually PNGs lose their crispness as they scale up into very large screens. I considered implementing multiple image sizes and converting the base format of the picture to SVG, but in the end did not feel I could deliver on the task within the time frame with the tools I had to hand. Instead I implemented an `h1` header that communicated the same information.
+
+#### Nav Bar
+
+The first draft of the nav bar was a horizontal `inline-block` implementation much like the demo site in the course, however as I was refactoring the site into a more mobile friendly solution the need for a smaller more succint menu was apparent. Most modern mobile first sites use a burger menu to aid in navigation, and while the solution seemed fairly straigtforward to implement with JavaScript any efforts I made to implement it cleanly with CSS became quite complicated. 
+
+I experimented with a few different techniques but settled on starting with a hidden nav menu with a list of the pages in the site. I [discovered a CSS technique](https://codepen.io/erikterwan/pen/EVzeRP) which created a 3 horizontal line hamburger and rotated them into an X and provided a drop down menu. I adapted this to my own site which solved the squashed menu effect I was seeing on smaller resolutions. 
+
+### Footer
+
+The footer comprises of 2 components, social media links and copywrite text in a flex box. I wanted the footer to sit at the very bottom of the screen when it appeared on the site so used the `justify-content: flex-end;` CSS attribute to do this.
+
+On smaller screens this worked fine but as the screans got larger the footer div would not sit at the bottom of the scream, so I implemented a `position: absolute;` for larger screen sizes forcing the content to the bottom right. 
+
+On it's own the `position: absolute;` caused an overlap with the content in smaller screens, this way I was able to provide a more consistant experience for the user.
+
 ## Page Specific Features
 
 ### index.html
 
-To function as the langing page. Information about the product, includes a purchase call to action as well as media elements.
+#### Hero Banner
+The hero banner contains an animated reverse zoom of a hunter in an effort to give the site a level of dynamisism on landing. A big driver in the game is that a single shot can kill and often that shot comes in the dark from an unkown location, both the image and the zoom out we selected to try and achieve this effect.
+
+For accessibility this animation is deactivated via the following code in `main.css`
+
+```
+@media screen and (prefers-reduced-motion) {
+  #banner-image {
+      animation-duration: 0s;
+    }
+  } 
+```
+
+The Banner also contains a fixed text over the banner image with a colour change to blood red of the `<span>die alone.</span>`, again to highlight the frailty your player character has in the game. The transition here is slower and doesn't include motion so the color change persists over reduced motion prefernce.
+
+#### Testimonials
+
+The testimonials section included a flex row wrapped div with 4 components: a title and 3 reviews. 
+
+As the first child of the div I could persist the title over the reviews by specifing the flex grow, shink and basis with: `flex: 1 0 100%;`
+
+This would mean no matter the size of the screen the title would remain on top. 
+
+For the reviews I decided to implement as blockquotes to preserve semantic meaning with direct links to the citations and styled them to be a fixed width. 
+
+On larger screen sizes this section looked quite small in comparison to everything else and so the content was spced out more using the following code:
+
+```
+#testimonials {
+    justify-content: space-evenly;
+  }
+```
+
+#### YouTube Media
+
+Initially I'd considered a video section here, but the constraints of gitlab and lack of suitable content prompted a flip into using a YouTube iframe for the media section. 
+
+As an import from youtube much of the functionality comes for free, the frame border and fullscreem mode were set by default as were many of the player's advanced options: `"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"`
+
+As an exteranl resource I added in `loading="lazy"` to tag the iframe as a non-blocking asset and make it load only as needed.
+
+The resolution sizes for the base iframe I implemented as a default 16:9 (as per the source video) and incremented the pixel sizes up through multiples of this ratio from 384px by 216px to 1600px by 900px in subsequent media screen sizes. This way the user sees a good portion of the content creator's video cover in their screen.
+
+#### Product Description
+
+This section is the main text description of Hunt: Showdown from the publisher's [store](https://eu-shop.crytek.com/games/hunt-showdown) stylised responsivley to fit within the site. Following the natural flow of the site, after some attention grabbing multi-media content this part explains to the user what the game is and how it works. This section uses a flex column to center the content.
+
+As the screen sizes become larger, this area begins to feel a little lost so for screens larger than 1920px I added a bonus background image of one of the games' bosses with the following code:
+
+```
+  #product {
+    background: url('../images/assassin.jpg') no-repeat center center , black;
+    margin: 0 12%;
+    padding: 20px 0;
+  }
+```
+
+This was intended to trick the eye into seeing more content than is really there on the larger screen.
+
+#### Purchase Links
+
+The Purchase Links at the bottom of the page are the call to action of the site, where upon viewing the content above hopefully the consumer will be inspired to consider purchasing the game, the code here is a re-implemetation of the code in the __Purchase Game__ section of the store page.
 
 ### store.html 
 
-Flex based gallery with uniform images with links out to purchase the games different editions and DLC content
+The store page provides links out two versions of the game, one from the official crytek store and an additional collectors edition in steam. The user can also head out to the official store view a selection of DLC from the game.
+
+The store sections are arranged on 2 flex row 'shelves' with the games being the top row and the DLC the lower one.
+
+```
+#games, #dlc {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+```
+
+On larger screens this is presented as 2 distinct rows, but the use of flex wrap ensures that on smaller screens this moves naturally into a column view without the need to refactor.
+
+The purchase items are yet another flex div within the outer section. For the DLC items I elected for fixed narrower width so that the text and background image for the store item would remain consistent within screen sizes and to allow a bit more content on a row.
+
+I wanted the game purchase boxes to be fairly large on the page to consume more real estate on a row in both the index and store pages. However the available image sizes limited the box sizes to around 400px (double the width) of the DLC components.
+
 
 ### gallery.html
 
-Column based gallery of image content that includes social media, concept art and screenshots.
+#### Game Gallery
 
 ### signup.html
 
-A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
+#### SignUp Form
 
 ### 404.html
-
-A functional page that will return when a user tries to follow a link to a non existant resource.
 
 This page leverages the github pages jekyll engine to provide a custom 404 experience for users. 
 
 The styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
 
-Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if child directories are inputted into the url..
-
-The styles are a reuse of the body styles in the main.css
+Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if child directories are inputted into the url.
 
 ## Features Left to Implement
 
 ### Responsive styles
 
-CIP1-10 add core styles: TODO implement responsive modes for the site
 CIP1-12 turn site into https site prior to final release
 
 ### Things that needed Javascript
@@ -94,6 +238,12 @@ CIP1-12 turn site into https site prior to final release
 The signup page currently bounces it's request off of the CI testing API, a future enhancement would be deal with this in the page.
 
 Change the signup page to be Modal launched as a discreet call to action that scrolls with the user. I was unable to work out how to implement a modal without JavaScript
+
+I would like to have implemented a colour switcher to allow for different color deficient vision types. I researched dark mode and css theme switches to try and work out a way to implement this. However within the timeframe I had allocated for the project I was unable to deliver on this without the use of javascript. 
+
+Additionally I considered implementing a font switcher to leverage the [OpenDyslexic](https://opendyslexic.org/) font as a switchable font face but again the implementation seemed dependent on javascript.
+
+The copyright section includes a date, I would like to have this updated based on the current year to lazy maintain the site, but I could not find a way to pull the date without server-side input or JavaScript.
 
 # Testing
 
@@ -107,7 +257,7 @@ CSS - Ensure No errors were found when passing through the official (Jigsaw) val
 
 # Bugs
 
-The Sign UP page includes css styling for form auto-complete that includes both background color and text color. These will not implemnt on every browser as user agent style sheets of many browsers use !important in their :-webkit-autofill style declarations, making them non-overridable with CSS. 
+The SignUp page includes css styling for form auto-complete that includes both background color and text color. These will not implemnt on every browser as user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable with CSS. 
 
 For example Chrome has the following in its internal stylesheet:
 

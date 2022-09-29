@@ -163,7 +163,6 @@ header {
 }
 
 #banner-cover-text h3 span {
-  /* animates color in effect on loading page */
   animation-name: banner-cover-colors;
   animation-duration: 5s;
   animation-delay: 3s;
@@ -484,6 +483,9 @@ footer {
 
 @media screen and (min-width: 480px) {
   /* 320px — 480px: Mobile devices */
+  .logo {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -603,9 +605,8 @@ footer {
 
 }
 
-@media (prefers-reduced-motion) {
+@media screen and (prefers-reduced-motion) {
   #banner-image {
       animation-duration: 0s;
     }
-  }
-      
+  }      
