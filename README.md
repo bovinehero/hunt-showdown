@@ -20,26 +20,39 @@ Hunt is an atmospheric horror game, the color pallette needs to be dark to enhan
 
 > The Landing page. Information about the product, includes a purchase call to action as well as media elements.
 
+wire frame and screenshot of finished product
+
 ### store.html 
 
 > Flex based gallery with uniform images with links out to purchase the games different editions and DLC content
+
+wire frame and screenshot of finished product
 
 ### gallery.html
 
 > Column based gallery of image content that includes social media, concept art and screenshots.
 
+wire frame and screenshot of finished product
+
 ### signup.html
 
 > A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
+
+wire frame and screenshot of finished product
 
 ### 404.html
 
 > A functional page that will return when a user tries to follow a link to a non existant resource.
 
+wire frame and screenshot of finished product
 
 # Features
 
 ## Global Features
+
+### Favicon & Meta Tags
+
+> TODO
 
 ### Body Background
 
@@ -213,11 +226,20 @@ I wanted the game purchase boxes to be fairly large on the page to consume more 
 
 ### gallery.html
 
-#### Game Gallery
+The gallery is composed of of various media from a press pack download the official Hunt Showdown [site](https://www.huntshowdown.com/media) arranged into a column defined section.
+
+I wanted to have a semblance of structure to the gallery but not be restrictive on image sizes as long as they fit propotionally within a column. To accomplish this I implemented a column-gap in the section to provide horizontal spacing and set the image widths to be 100% of the column. To keep the design mobile firstt, the smaller screens recieve a single column containing pictures as the default, screen resolutions increase the number of columns gradually increase to 4 via use of media queries, ensuring the gallery consumes more of the real esate availabe on screen.
 
 ### signup.html
 
-#### SignUp Form
+The signup form was heavily influenced by the love running project within the course. Originally I'd planned for this to be a modal either launched from the footer or in the sticky menu but could not work out a clean way to do this without javascript.
+
+By default the form is positioned to the left by default and use all the horizontal space with a max-width of 100%, fixed padding size or 30px but a flexible 10% margin. This was in an attempt to make it use as much space as possible without consuming the entire screen asthetically pleasing in smaller screens. 
+
+As the viewing port becomes larger we use proportionally reduce the max-width in the media queries to avoid making the form look stretched accross the section.
+
+By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
+
 
 ### 404.html
 
@@ -230,6 +252,8 @@ Similarly the link back to the home page needs to directly reference the home ur
 ## Features Left to Implement
 
 ### Responsive styles
+
+In the gallery.html page the code is succint but produses inefficent results as the pictures are not optimised for scale or format. Multiple picture sizes using modern formats like webp would reduce the time to load here and create a better experince for users.
 
 CIP1-12 turn site into https site prior to final release
 
@@ -280,3 +304,7 @@ Google Fonts for the fonts
 Font Awesome for the icons
 
 Crytek for the game footage and the presspack
+
+Mozilla for the current standards
+
+[Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) for the idea on the CSS burger
