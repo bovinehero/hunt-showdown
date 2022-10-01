@@ -308,3 +308,5 @@ Crytek for the game footage and the presspack
 Mozilla for the current standards
 
 [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) for the idea on the CSS burger
+
+[https://ezgif.com/](https://ezgif.com/) image conversion to webp
