@@ -425,7 +425,7 @@ header {
 }
 
 .text-input:hover, .date-input:hover {
-  border-color: black;
+  border-color: rgba(136, 8, 8, 1);
 }
 
 .text-input:autofill {
@@ -449,7 +449,7 @@ header {
   border-radius: 2px;
   padding: 15px 32px 15px 32px;
   text-align: center;
-  background-color: black;
+  background-color: rgba(136, 8, 8, 1);
   color: blanchedalmond;
   display: block;
   float: right;
