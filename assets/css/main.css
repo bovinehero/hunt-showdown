@@ -495,7 +495,7 @@ footer {
 
 /* Media resizes */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   /* 320px — 480px: Mobile devices */
   .logo {
     font-size: 1.1rem;

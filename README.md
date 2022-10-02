@@ -242,8 +242,6 @@ As the viewing port becomes larger we use proportionally reduce the max-width in
 
 By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
 
-> TODO Fix Form color readibility
-
 ### 404.html
 
 This page leverages the github pages jekyll engine to provide a custom 404 experience for users. 
