@@ -200,16 +200,17 @@ header {
 
 #testimonials {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
 }
 
 #testimonials > div {
   gap: 20px;
   display: block;
-  flex: 0 0 330px;
+  flex: 0 0 30%;
   margin: 10px 20px;
   padding: 1%;
+  text-align: center;
 }
 
 #testimonials > div:first-child {
@@ -496,9 +497,27 @@ footer {
 /* Media resizes */
 
 @media screen and (min-width: 320px) {
+  /* 320px Old Mobile devices */
+  .logo {
+    font-size: 1.0rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
   /* 320px — 480px: Mobile devices */
   .logo {
     font-size: 1.1rem;
+  }
+  #testimonials {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  footer {
+    font-size: 1rem;
   }
 }
 
@@ -522,8 +541,6 @@ footer {
 
 @media screen and (min-width: 1024px) {
   /* 769px — 1024px: Small screens, laptop */
-  /* body {
-  } */
 
   #banner-wrapper {
     height: 460px;
