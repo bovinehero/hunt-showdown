@@ -230,6 +230,8 @@ The gallery is composed of of various media from a press pack download the offic
 
 I wanted to have a semblance of structure to the gallery but not be restrictive on image sizes as long as they fit propotionally within a column. To accomplish this I implemented a column-gap in the section to provide horizontal spacing and set the image widths to be 100% of the column. To keep the design mobile firstt, the smaller screens recieve a single column containing pictures as the default, screen resolutions increase the number of columns gradually increase to 4 via use of media queries, ensuring the gallery consumes more of the real esate availabe on screen.
 
+> TODO Images sizes
+
 ### signup.html
 
 The signup form was heavily influenced by the love running project within the course. Originally I'd planned for this to be a modal either launched from the footer or in the sticky menu but could not work out a clean way to do this without javascript.
@@ -240,6 +242,7 @@ As the viewing port becomes larger we use proportionally reduce the max-width in
 
 By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
 
+> TODO Fix Form color readibility
 
 ### 404.html
 

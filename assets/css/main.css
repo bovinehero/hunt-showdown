@@ -465,8 +465,8 @@ header {
 
 footer {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: row wrap;
+  justify-content: space-between;
   background-color: transparent;
   width: 100%;
   right: 0;
