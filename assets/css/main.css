@@ -462,7 +462,7 @@ header {
 
 footer {
   display: flex;
-  flex-direction: row wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   background-color: transparent;
   width: 100%;
