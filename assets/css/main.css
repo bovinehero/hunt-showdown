@@ -260,11 +260,7 @@ header {
   align-self: center;
   font-size: 1rem;
   padding: 1rem 1rem;
-  background: no-repeat center center , rgba(60, 60, 60, 0.4); */
-  
-  /* rgba(136, 8, 8, 0.6); */
-
-   /* rgba(60, 60, 60, 0.6); */
+  background: no-repeat center center , rgba(60, 60, 60, 0.4); 
 }
 
 #product h2 {
