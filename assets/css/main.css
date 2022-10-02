@@ -245,6 +245,7 @@ header {
   width: 384px;
   height: 216px;
   margin: 20px;
+  border: 0px;
 }
 
 #product {
