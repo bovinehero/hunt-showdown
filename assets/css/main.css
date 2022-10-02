@@ -458,6 +458,22 @@ header {
   color: blanchedalmond;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: blanchedalmond;
+  opacity: 0.6; /* Firefox */
+  margin-left: 1rem;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: blanchedalmond;
+  opacity: 0.6; 
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: blanchedalmond;
+  opacity: 0.6; 
+}
+
 
 /* Footer */
 
