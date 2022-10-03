@@ -87,7 +87,7 @@ The content and description I added to aid in SEO.
 
 To provide a clean experience I reset the `margin`, `padding` and set the `box-sizing` to `border-box` as per best practice in the [mdm web docs](https://developer.mozilla.org/en-US/docs/Learn/CSS). I also set the border to none, so that if I wanted to include borders I could create them from scratch.
 
-```
+``` css
 * {
   margin: 0;
   padding: 0;
@@ -98,7 +98,7 @@ To provide a clean experience I reset the `margin`, `padding` and set the `box-s
 
 Almost immediately I decided that I wanted an atmospheric background image to fill the page and scroll with the user, which I implemented this with the following code: 
 
-```
+``` css
 body {
     position: relative;
     min-height: 100vh;
@@ -139,13 +139,13 @@ For the headings font I selected __Crimson Pro__, as it is based on an updated v
 
 This way I could keep within the theme of the site without directly copying it.
 
-```
+``` css
 font-family: 'Crimson Pro', serif;
 ```
 
 The font selected for the main body was selected for readibility, with a sans-serif being optimal for screens I selected __Open Sans__ as it designed for legibility across print, web, and mobile interfaces.
 
-```
+``` css
 font-family: 'Open Sans', sans-serif;
 ```
 
@@ -186,7 +186,7 @@ The hero banner contains an animated reverse zoom of a hunter in an effort to gi
 
 For accessibility this animation is deactivated via the following code in `main.css`
 
-```
+``` css
 @media screen and (prefers-reduced-motion) {
   #banner-image {
       animation-duration: 0s;
@@ -208,7 +208,7 @@ For the reviews I decided to implement as blockquotes to preserve semantic meani
 
 On larger screen sizes this section looked quite small in comparison to everything else and so the content was spced out more using the following code:
 
-```
+``` css
 #testimonials {
     justify-content: space-evenly;
   }
@@ -230,7 +230,7 @@ This section is the main text description of Hunt: Showdown from the publisher's
 
 As the screen sizes become larger, this area begins to feel a little lost so for screens larger than 1920px I added a bonus background image of one of the games' bosses with the following code:
 
-```
+``` css
   #product {
     background: url('../images/assassin.jpg') no-repeat center center , black;
     margin: 0 12%;
@@ -250,7 +250,7 @@ The store page provides links out two versions of the game, one from the officia
 
 The store sections are arranged on 2 flex row 'shelves' with the games being the top row and the DLC the lower one.
 
-```
+``` css
 #games, #dlc {
   display: flex;
   flex-flow: row wrap;
