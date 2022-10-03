@@ -327,7 +327,7 @@ The SignUp page includes css styling for form auto-complete that includes both b
 
 For example Chrome has the following in its internal stylesheet:
 
-```
+``` css
 background-color: rgb(232, 240, 254) !important;
 background-image: none !important;
 color: -internal-light-dark(black, white) !important;
