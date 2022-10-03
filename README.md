@@ -12,9 +12,12 @@ As a faux marketing site the main goal is to focus on a media heavy approach, as
 
 ## Design Considerations
 
-Initially I looked into building this site desktop first rather than a mobile first, however while this provide ample learning opertunities it was not condusive to good design practice as positioning and sizing became a common cause for code refactors. Ultimatley this led to a refactor the initial build into a mobile responsive site after I had created the base content in a larger viewing area.
+Initially I looked into building this site desktop first rather than a mobile first, however while this provided ample learning opportunities it was not conducive to good design practice as positioning and sizing became a common cause for code refactors. Ultimately this led to a refactor of the initial build into a mobile responsive site after I had generated the base content in a large screen size.
+ 
+Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 
-Hunt is an atmospheric horror game, the color pallette needs to be dark to enhance the hidden threat with contrast coming from lighter text and highlights to calls to action. As a faux advertising site, text components should be a minimum reliance should be on pictures and graphics to help create the mood. This ensures that potential customers 
+Additionally as a faux advertising site, text components should have a minimum reliance on text, instead the pictures and graphics should be used to advertise what the game is like for potential players.
+
 
 ### index.html
 
@@ -50,9 +53,35 @@ wire frame and screenshot of finished product
 
 ## Global Features
 
-### Favicon & Meta Tags
+### Favicon & Head Tags
 
-> TODO
+As this project is part of a portfolio of work hosted on my personal domain of bovinehero.com I included my favicon image from the parent site which thanks to the github hosting engine auto presents itself in the address tab of the website. I will be including this in all projects going forward that are hosted on this domain in order to 'sign' the work as part of my portfolio.  
+
+I also included the :cowboy_hat_face: emoji in the title of every page. I did this because:
+
+1. The game is set in the 1890s Lousisiana cowboys are a part of the theme.
+2. Because we can and development without a little whimsy is a job.
+
+I started with the boilerplate meta tags that come packed with Visual Studio Code's http extensions to define `charset`, `http-equiv`, `content` and `viewport`
+
+Registering with font awesome I was able to used some of their icons in various pages, but to be honest they were used so little within the site's pages that replacing them for smaller images may have improved loading performance.
+
+I elected for an external stylesheet __assets/css/main.css__ for everything except for the custom 404 page as it is considered best practice. I chose to follow the scss naming convention of 'main.css' for this as (while not in scope here) in future projects may wish to look at thematic style toggles and varaiblising style settings in future projects.
+
+The content and description I added to aid in SEO.
+
+``` html
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4038346e3a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="keywords" content="hunt showdown, hunt, huntz">
+    <meta name="description" content="Fan made site for Hunt: Showdown as part of Code Institute work">
+    <title> 🤠 Hunt Showdown | Home</title>
+</head>
+```
 
 ### Body Background
 
@@ -67,8 +96,7 @@ To provide a clean experience I reset the `margin`, `padding` and set the `box-s
 }
 ```
 
-Almost immediatley I decided that I wanted an atmospheric background image to fill the page and scroll with the user.
-I implemented this with the following code, which created a fallback of black in the areas that the image would not cover.
+Almost immediately I decided that I wanted an atmospheric background image to fill the page and scroll with the user, which I implemented this with the following code: 
 
 ```
 body {
@@ -78,19 +106,32 @@ body {
   }
 ```
 
-This created the eerie lost in the dark forest effect I was going for in the background.
+Which created a fallback of black in the areas that the image would not cover and establishes an eerie lost in the dark effect.
 
 ### Colors
 
-In order to create a pitch dark, dead of night feeling a full black background is set as the base background. This allows a build up of elements to establish mood and calls to action can be easily defined with bright coloration. 
+In order to create a pitch dark, dead of night feeling a full black `#000000` background is set as the base background. This allows a build up of elements to establish mood and calls to action can be easily defined with bright coloration. 
 
-As the theme of the game is occult, blood and bone colors make a logical choice for the calls to action and base text.
-
-For the default font color `blanchedalmond` was selected as it's off white shade provides adequete contrast to the black and red and gives without feeiling monchromatic.
+As the theme of the game is occult, blood and bone colors make a logical choice for the calls to action and base text. For the default font color `blanchedalmond` or `#ffebcd`was selected as it's off white shade provides adequete contrast to the black and red and gives without feeiling monchromatic.
 
 An almost blood red `#880808` gives an appropriate feel to the site while providing significant contrast that it can be used in both white and black color situations.
 
-The main drawback of this colour scheme is that some people cannot register red in their visual spectrum, this presents as a missing colour on the black end of the spectrum thus any use of the red coloration was contrasted with the lighter `blanchedalmond` in order to preserve accessibility.
+<div>
+  <div style="color:#ffebcd; background-color:#000000; text-align:center; vertical-align: middle; padding:20px 0;">
+  000000
+  </div>
+  <div style="color:#ffebcd; background-color:#880810; text-align:center; vertical-align: middle; padding:20px 0;">
+  880810
+  </div>
+  <div style="color:#ffebcd; background-color:#333333; text-align:center; vertical-align: middle; padding:20px 0;">
+  333333
+  </div>
+  <div style="color:#001432; background-color:#ffebcd; text-align:center; vertical-align: middle; padding:20px 0;">
+  FFEBCD
+  </div>
+</div>
+
+The main drawback of this colour scheme is that some people cannot register red in their visual spectrum, this presents as a missing colour towards the black end of vision thus any use of the red coloration is contrasted with the lighter blanched almond shade in order to preserve accessibility.
 
 ### Fonts
 

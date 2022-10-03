@@ -395,7 +395,7 @@ header {
   align-items: center;
   height: 700px;
   max-width: 100%;
-  background: url("../images/signup-form.webp");
+  background: url("../images/signup/signup-form.webp");
   background-size: cover;
   background-position: center;
 }
