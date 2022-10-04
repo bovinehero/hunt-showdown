@@ -1,55 +1,175 @@
 # Hunt Showdown
 
-This site is a fake hunt marketing site for the popular battle-royal & PVE game [Hunt Showdown](https://www.huntshowdown.com/) built in CSS anf HTML.
+> TODO Images sizes
+> TODO Wireframe Links
 
-As a faux marketing site the main goal is to focus on a media heavy approach, as typically large blocks of texts do not aide sales.
+## User Experience
+
+This site is a (fake) marketing site for the popular battle-royal & PVE game [Hunt Showdown](https://www.huntshowdown.com/) made by Crytek.
+As a Player vs Player, Player vs Environment battle royal game in a fictional Weird West setting this video game offers a refreshing take on battle royale multiplayer games.
+Due to a recent growth in popularity Crytek has recently invested in the development of new content and wants to bring even more players into the game.
+
+As a marketing site the main from the site is to enable sales to new and existing players and promote a way for them to keep up to date with new developments.
+
+## Key Information on the Site
++ A description of what Hunt Showdown is.
++ How to buy the main game and it's DLC.
++ A way to sign up for news and get to the social media of the company.
++ Images depicting the main game and its themes.
+
 
 ## User Stories
 
-1. As a potential player of this game I would like to know more about it in order to make a decision should I buy it
-2. As a future player of this game I would like to be able to be able to go and purchase this game from the site
-3. As a current player I would like to be informed of upcoming events, features and community events
+### Client Goals
++ To be able to view the site on a range of device sizes.
++ To make it easy for potential players to find out what Hunt Showdown is and how to buy it.
++ To allow people to be able to sign up for updates on the game.
+
+### First Time Visitor Goals
++ I would like to know more about the game in order to make a decision should I buy it.
++ I want to be able to navigate the site easily to find information.
++ I would like to be able to be able to go and purchase this game from the site.
++ I would like to be informed of upcoming events, features and community events.
+
+### Returning Players Goals
++ I would like to be able to be able to go and purchase additional content for this game from the site.
++ I would like to be informed of upcoming events, features and community events
+
 
 ## Design Considerations
 
 Initially I looked into building this site desktop first rather than a mobile first, however while this provided ample learning opportunities it was not conducive to good design practice as positioning and sizing became a common cause for code refactors. Ultimately this led to a refactor of the initial build into a mobile responsive site after I had generated the base content in a large screen size.
- 
+
+
+### Colour
+
+![image color pallette](assets/images/palette.svg)
+
 Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 
-Additionally as a faux advertising site, text components should have a minimum reliance on text, instead the pictures and graphics should be used to advertise what the game is like for potential players.
+The colour palette was created using the [Coolors](https://coolors.co/) website.
+
+### Typography
+
+### Fonts
 
 
-### index.html
+Google Fonts was used for the following fonts:
 
-> The Landing page. Information about the product, includes a purchase call to action as well as media elements.
++ __Crimson Pro__ is used for headings on the site. It is a serif font based on an updated version of the __Crimson Text__ serif typeface used on the Hunt: Showdown [website](https://www.huntshowdown.com/).
 
-wire frame and screenshot of finished product
++ __Open Sans__ is used for the body text on the site. It is a sans-serif font and was selected for readibility as it designed for legibility across print, web, and mobile interfaces.
 
-### store.html 
 
-> Flex based gallery with uniform images with links out to purchase the games different editions and DLC content
+### Imagery
 
-wire frame and screenshot of finished product
+As a faux advertising site, text components should have a minimum reliance on text, instead the focus should be on pictures and graphics to advertise what the game is like for potential players.
 
-### gallery.html
+The images used within the site are all available in the public presspack available from the Hunt: Showdown [website](https://www.huntshowdown.com/).
 
-> Column based gallery of image content that includes social media, concept art and screenshots.
 
-wire frame and screenshot of finished product
+### Wireframes
 
-### signup.html
+Wireframes were created for desktop as a desktop first approach was initially considered. 
+Later iterations of the CSS flipped to mobile first approach, changes were adapted to work with the smaller screen on the fly within limitations of the screen real estate.
 
-> A form page that takes user details and signs them up for the newsletter. This is mocked as there is currently no endpoint for this functionality.
+TODO - LINKME Home Page Wireframe 
 
-wire frame and screenshot of finished product
+TODO - LINKME  Store Wireframe
 
-### 404.html
+TODO - LINKME  Gallery Wireframe
 
-> A functional page that will return when a user tries to follow a link to a non existant resource.
+TODO - LINKME  Sign UP  Wireframe
 
-wire frame and screenshot of finished product
+TODO - LINKME  404  Wireframe
 
-# Features
+
+## Features
+The website is comprised of five pages, four of which are accessible from the navigation menu (index/home page, store page, gallery page and the sign up (Join the Posse!) page). The fifth page is a 404 page which which will return the user to th ehome page should they click on an expired link within the site.
+
++ All Pages on the website have:
+
+  + A responsive navigation bar at the top which allows the user to navigate through the site. To the left of the navigation bar is the logo text and to to the right of the navigation bar is an animated CSS hamburger menu which gives access to the website pages. To allow a good user experience of the site, the navigation bar is a minimal height and sticky to allow intra site navigation at any point in scrolling the various pages. The hamburger was implemented to give the site a clean look and to promote a good mobile first user experience, anecdotally users are used to seeing the burger icon when on mobile devices to navigate a site, and because a non javascript burger menu would provide ample practice with CSS animations I adapted code from [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) to implement the CSS burger.
+
+  + A footer which contains social media icon links to Facebook, Twitter, YouTube, Instagram, Discord, GitHub and GitLab pages. Additionally there is also a note of copyright for my work. Icons were used to keep the footer clean and tight and because they are universally recognisable.
+
+
++ index.html
+  
+  + Hero Banner: contains an animated reverse zoom of a hunter in an effort to give the site a level of dynamisism on landing along with fixed text to ephasise the mood of the game.
+    + A big driver in the game is that a single shot can kill and often that shot comes in the dark from an unkown location, both the image and the zoom out we selected to try and achieve this effect.
+    + For accessibility this animation is deactivated via a `prefers-reduced-motion` media query in `main.css`
+    + The fixed text over the banner image has a colour change to blood red of the `<span>die alone.</span>`, to highlight the frailty your player character has in the game. The transition here is slower and doesn't include motion so the color change persists over reduced motion preference.
+  
+  + Testimonials: a flex row wrapped div with a title and 3 favourable reviews of the game.
+  
+  + YouTube Media: The official launch trailer from the youtube site for the game developed by Crytek.
+    + Initially I'd considered a video section here, but the constraints of gitlab and lack of suitable content prompted a flip into using a YouTube iframe for the media section. 
+    + As an exteranl resource I added in `loading="lazy"` to tag the iframe as a non-blocking asset and make it load only as needed.
+    + The resolution sizes for the base iframe I implemented as a default 16:9 (as per the source video) and incremented the pixel sizes up through multiples of this ratio from 384px by 216px to 1600px by 900px in subsequent media screen sizes. This way the user sees a good portion of the content creator's video cover in their screen.
+  
+  + Product Description: the main text description of Hunt: Showdown from the publisher's [store](https://eu-shop.crytek.com/games/hunt-showdown) stylised responsivley to fit within the site. 
+    + Following the natural flow of the site, after some attention grabbing multi-media content this part explains to the user what the game is and how it works. This section uses a flex column to center the content.
+
+  + Purchase Links: This is the call to action of the page, where upon viewing the content a new player consumer will be inspired to purchasing the game.
+    + The code here is a re-implemetation of the code in the __Purchase Game__ section of the store page.
+
++ store.html 
+
+  + Game and DLC Purchase Links: These are calls to action components of the site, arranged on 2 flex row 'shelves' with the games being the top row and the DLC the lower one.
+
+    + The store page provides links out two versions of the game, one from the official crytek store and an additional collectors edition in steam. 
+    + The user can also head out to the official store view a selection of DLC from the game.
+    + On larger screens this is presented as 2 distinct rows, but the use of flex wrap ensures that on smaller screens this moves naturally into a column view without the need to refactor.
+    + For the DLC items I elected for fixed narrower width so that the text and background image for the store item would remain consistent within screen sizes and to allow a bit more content on a row.
+    + I wanted the game purchase boxes to be fairly large on the page to consume more real estate on a row in both the index and store pages. However the available image sizes limited the box sizes to around 400px (double the width) of the DLC components.
+
++ gallery.html
+
+  + Assorted image size gallery: a composed of of various media from a press pack download the official Hunt Showdown [site](https://www.huntshowdown.com/media) arranged into a column defined section.
+    + I implemented a column-gap in the section to provide horizontal spacing and set the image widths to be 100% of the column in order to make resizing easy for a single image source.
+    + Smaller screens recieve a single column containing pictures as the default, screen resolutions increase the number of columns gradually increase to 4 via use of media queries, ensuring the gallery consumes more of the screen as it gets larger.
+
++ signup.html
+
+  + Signup Form:  
+    + this was heavily influenced by the love running project within the course. Originally I'd planned for this to be a modal either launched from the footer or in the sticky menu but could not work out a clean way to do this without javascript.
+    + By default the form is positioned to the left by default and use all the horizontal space with a max-width of 100%, fixed padding size or 30px but a flexible 10% margin. This was in an attempt to make it use as much space as possible without consuming the entire screen asthetically pleasing in smaller screens. 
+    + As the viewing port becomes larger we use proportionally reduce the max-width in the media queries to avoid making the form look stretched accross the section. - By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
+    + The form uses client side validation for the email address via the following regex: `pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"`
+    + The submitters Name is not required as this constitutes PII, which we don't need in order to send someone an email style news letter. PII needs robust data handling practices, this ids an overhead I do not want to manage at this stage.
+
++ 404.html
+
+  + Leverages the github pages jekyll engine to provide a custom 404 experience for users. 
+    + Styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
+    + Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if non-existant child directories are inputted into the url.
+
+### Future Implementations
+
++ The signup page currently bounces it's request off of the CI testing API, a future enhancement would be deal with this in the page.
++ Change the signup page to be Modal launched as a discreet call to action that scrolls with the user. I was unable to work out how to implement a modal without JavaScript
++ I would like to have implemented a colour switcher to allow for different color deficient vision types. I researched dark mode and css theme switches to try and work out a way to implement this. However within the timeframe I had allocated for the project I was unable to deliver on this without the use of javascript. 
++ Additionally I considered implementing a font switcher to leverage the [OpenDyslexic](https://opendyslexic.org/) font as a switchable font face but again the implementation seemed dependent on javascript.
++ The copyright section includes a date, I would like to have this updated based on the current year to lazy maintain the site, but I could not find a way to pull the date without server-side input or JavaScript.
+
+## Accessibility
+I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
+
++ Using semantic HTML.
++ Using descriptive alt attributes on images on the site.
++ Providing information for screen readers where there are icons used and no text - such as the review ratings for books & footer icons.
++ Ensuring that there is a sufficient colour contrast throughout the site.
++ Ensuring menus are accessible by marking the current page as current for screen readers.
+
+>>> OpenDyslexic: a consideration for future projects. 
+
+I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style.  
+
+With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
+>>>
+############################################################################# `NOTES BELOW`
+                
 
 ## Global Features
 
@@ -108,208 +228,7 @@ body {
 
 Which created a fallback of black in the areas that the image would not cover and establishes an eerie lost in the dark effect.
 
-### Colors
 
-In order to create a pitch dark, dead of night feeling a full black `#000000` background is set as the base background. This allows a build up of elements to establish mood and calls to action can be easily defined with bright coloration. 
-
-As the theme of the game is occult, blood and bone colors make a logical choice for the calls to action and base text. For the default font color `blanchedalmond` or `#ffebcd`was selected as it's off white shade provides adequete contrast to the black and red and gives without feeiling monchromatic.
-
-An almost blood red `#880808` gives an appropriate feel to the site while providing significant contrast that it can be used in both white and black color situations.
-
-<div>
-  <div style="color:#ffebcd; background-color:#000000; text-align:center; vertical-align: middle; padding:20px 0;">
-  000000
-  </div>
-  <div style="color:#ffebcd; background-color:#880810; text-align:center; vertical-align: middle; padding:20px 0;">
-  880810
-  </div>
-  <div style="color:#ffebcd; background-color:#333333; text-align:center; vertical-align: middle; padding:20px 0;">
-  333333
-  </div>
-  <div style="color:#001432; background-color:#ffebcd; text-align:center; vertical-align: middle; padding:20px 0;">
-  FFEBCD
-  </div>
-</div>
-
-The main drawback of this colour scheme is that some people cannot register red in their visual spectrum, this presents as a missing colour towards the black end of vision thus any use of the red coloration is contrasted with the lighter blanched almond shade in order to preserve accessibility.
-
-### Fonts
-
-For the headings font I selected __Crimson Pro__, as it is based on an updated version of the __Crimson Text__ serif typeface used on the Hunt Showdown [website](https://www.huntshowdown.com/).
-
-This way I could keep within the theme of the site without directly copying it.
-
-``` css
-font-family: 'Crimson Pro', serif;
-```
-
-The font selected for the main body was selected for readibility, with a sans-serif being optimal for screens I selected __Open Sans__ as it designed for legibility across print, web, and mobile interfaces.
-
-``` css
-font-family: 'Open Sans', sans-serif;
-```
-
-> OpenDyslexic: a consideration for future projects
-
-I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style. 
-
-With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
-
-### Header
-
-The header comprised of 2 components the Logo and Navigation Bar. I elected to make this a sticky header so that it would scroll with the user as they traverse the site to provide continuous navigation options.
-
-#### Logo
-
-Originally I had planned to include a logo picture in the Header, however this was unweildy as the only images I could get that were suitable were pngs, an SVG asset would have provided auto scale regardless but eventually PNGs lose their crispness as they scale up into very large screens. I considered implementing multiple image sizes and converting the base format of the picture to SVG, but in the end did not feel I could deliver on the task within the time frame with the tools I had to hand. Instead I implemented an `h1` header that communicated the same information.
-
-#### Nav Bar
-
-The first draft of the nav bar was a horizontal `inline-block` implementation much like the demo site in the course, however as I was refactoring the site into a more mobile friendly solution the need for a smaller more succint menu was apparent. Most modern mobile first sites use a burger menu to aid in navigation, and while the solution seemed fairly straigtforward to implement with JavaScript any efforts I made to implement it cleanly with CSS became quite complicated. 
-
-I experimented with a few different techniques but settled on starting with a hidden nav menu with a list of the pages in the site. I [discovered a CSS technique](https://codepen.io/erikterwan/pen/EVzeRP) which created a 3 horizontal line hamburger and rotated them into an X and provided a drop down menu. I adapted this to my own site which solved the squashed menu effect I was seeing on smaller resolutions. 
-
-### Footer
-
-The footer comprises of 2 components, social media links and copywrite text in a flex box. I wanted the footer to sit at the very bottom of the screen when it appeared on the site so used the `justify-content: flex-end;` CSS attribute to do this.
-
-On smaller screens this worked fine but as the screans got larger the footer div would not sit at the bottom of the scream, so I implemented a `position: absolute;` for larger screen sizes forcing the content to the bottom right. 
-
-On it's own the `position: absolute;` caused an overlap with the content in smaller screens, this way I was able to provide a more consistant experience for the user.
-
-## Page Specific Features
-
-### index.html
-
-#### Hero Banner
-The hero banner contains an animated reverse zoom of a hunter in an effort to give the site a level of dynamisism on landing. A big driver in the game is that a single shot can kill and often that shot comes in the dark from an unkown location, both the image and the zoom out we selected to try and achieve this effect.
-
-For accessibility this animation is deactivated via the following code in `main.css`
-
-``` css
-@media screen and (prefers-reduced-motion) {
-  #banner-image {
-      animation-duration: 0s;
-    }
-  } 
-```
-
-The Banner also contains a fixed text over the banner image with a colour change to blood red of the `<span>die alone.</span>`, again to highlight the frailty your player character has in the game. The transition here is slower and doesn't include motion so the color change persists over reduced motion prefernce.
-
-#### Testimonials
-
-The testimonials section included a flex row wrapped div with 4 components: a title and 3 reviews. 
-
-As the first child of the div I could persist the title over the reviews by specifing the flex grow, shink and basis with: `flex: 1 0 100%;`
-
-This would mean no matter the size of the screen the title would remain on top. 
-
-For the reviews I decided to implement as blockquotes to preserve semantic meaning with direct links to the citations and styled them to be a fixed width. 
-
-On larger screen sizes this section looked quite small in comparison to everything else and so the content was spced out more using the following code:
-
-``` css
-#testimonials {
-    justify-content: space-evenly;
-  }
-```
-
-#### YouTube Media
-
-Initially I'd considered a video section here, but the constraints of gitlab and lack of suitable content prompted a flip into using a YouTube iframe for the media section. 
-
-As an import from youtube much of the functionality comes for free, the frame border and fullscreem mode were set by default as were many of the player's advanced options: `"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"`
-
-As an exteranl resource I added in `loading="lazy"` to tag the iframe as a non-blocking asset and make it load only as needed.
-
-The resolution sizes for the base iframe I implemented as a default 16:9 (as per the source video) and incremented the pixel sizes up through multiples of this ratio from 384px by 216px to 1600px by 900px in subsequent media screen sizes. This way the user sees a good portion of the content creator's video cover in their screen.
-
-#### Product Description
-
-This section is the main text description of Hunt: Showdown from the publisher's [store](https://eu-shop.crytek.com/games/hunt-showdown) stylised responsivley to fit within the site. Following the natural flow of the site, after some attention grabbing multi-media content this part explains to the user what the game is and how it works. This section uses a flex column to center the content.
-
-As the screen sizes become larger, this area begins to feel a little lost so for screens larger than 1920px I added a bonus background image of one of the games' bosses with the following code:
-
-``` css
-  #product {
-    background: url('../images/assassin.jpg') no-repeat center center , black;
-    margin: 0 12%;
-    padding: 20px 0;
-  }
-```
-
-This was intended to trick the eye into seeing more content than is really there on the larger screen.
-
-#### Purchase Links
-
-The Purchase Links at the bottom of the page are the call to action of the site, where upon viewing the content above hopefully the consumer will be inspired to consider purchasing the game, the code here is a re-implemetation of the code in the __Purchase Game__ section of the store page.
-
-### store.html 
-
-The store page provides links out two versions of the game, one from the official crytek store and an additional collectors edition in steam. The user can also head out to the official store view a selection of DLC from the game.
-
-The store sections are arranged on 2 flex row 'shelves' with the games being the top row and the DLC the lower one.
-
-``` css
-#games, #dlc {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-```
-
-On larger screens this is presented as 2 distinct rows, but the use of flex wrap ensures that on smaller screens this moves naturally into a column view without the need to refactor.
-
-The purchase items are yet another flex div within the outer section. For the DLC items I elected for fixed narrower width so that the text and background image for the store item would remain consistent within screen sizes and to allow a bit more content on a row.
-
-I wanted the game purchase boxes to be fairly large on the page to consume more real estate on a row in both the index and store pages. However the available image sizes limited the box sizes to around 400px (double the width) of the DLC components.
-
-
-### gallery.html
-
-The gallery is composed of of various media from a press pack download the official Hunt Showdown [site](https://www.huntshowdown.com/media) arranged into a column defined section.
-
-I wanted to have a semblance of structure to the gallery but not be restrictive on image sizes as long as they fit propotionally within a column. To accomplish this I implemented a column-gap in the section to provide horizontal spacing and set the image widths to be 100% of the column. To keep the design mobile firstt, the smaller screens recieve a single column containing pictures as the default, screen resolutions increase the number of columns gradually increase to 4 via use of media queries, ensuring the gallery consumes more of the real esate availabe on screen.
-
-> TODO Images sizes
-
-### signup.html
-
-The signup form was heavily influenced by the love running project within the course. Originally I'd planned for this to be a modal either launched from the footer or in the sticky menu but could not work out a clean way to do this without javascript.
-
-By default the form is positioned to the left by default and use all the horizontal space with a max-width of 100%, fixed padding size or 30px but a flexible 10% margin. This was in an attempt to make it use as much space as possible without consuming the entire screen asthetically pleasing in smaller screens. 
-
-As the viewing port becomes larger we use proportionally reduce the max-width in the media queries to avoid making the form look stretched accross the section.
-
-By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
-
-### 404.html
-
-This page leverages the github pages jekyll engine to provide a custom 404 experience for users. 
-
-The styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
-
-Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if child directories are inputted into the url.
-
-## Features Left to Implement
-
-### Responsive styles
-
-In the gallery.html page the code is succint but produses inefficent results as the pictures are not optimised for scale or format. Multiple picture sizes using modern formats like webp would reduce the time to load here and create a better experince for users.
-
-CIP1-12 turn site into https site prior to final release
-
-### Things that needed Javascript
-
-The signup page currently bounces it's request off of the CI testing API, a future enhancement would be deal with this in the page.
-
-Change the signup page to be Modal launched as a discreet call to action that scrolls with the user. I was unable to work out how to implement a modal without JavaScript
-
-I would like to have implemented a colour switcher to allow for different color deficient vision types. I researched dark mode and css theme switches to try and work out a way to implement this. However within the timeframe I had allocated for the project I was unable to deliver on this without the use of javascript. 
-
-Additionally I considered implementing a font switcher to leverage the [OpenDyslexic](https://opendyslexic.org/) font as a switchable font face but again the implementation seemed dependent on javascript.
-
-The copyright section includes a date, I would like to have this updated based on the current year to lazy maintain the site, but I could not find a way to pull the date without server-side input or JavaScript.
 
 # Testing
 
@@ -337,6 +256,11 @@ color: -internal-light-dark(black, white) !important;
 
 This means auto-fill background-color, background-image, and color cannot be set reliabily without the inclusion of Javascript. 
 
+
+# Technologies Used
+
+Built in CSS and HTML, hosted on github pages, DNS service provided by Google DNS
+
 # Credits
 
 Special thanks for folks
@@ -352,3 +276,5 @@ Mozilla for the current standards
 [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) for the idea on the CSS burger
 
 [https://ezgif.com/](https://ezgif.com/) image conversion to webp
+
+[https://coolors.co/](https://coolors.co/) for colour pallette image
