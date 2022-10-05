@@ -53,13 +53,11 @@ The colour palette was created using the [Coolors](https://coolors.co/) website.
 
 ### Fonts
 
-
 Google Fonts was used for the following fonts:
 
 + __Crimson Pro__ is used for headings on the site. It is a serif font based on an updated version of the __Crimson Text__ serif typeface used on the Hunt: Showdown [website](https://www.huntshowdown.com/).
 
 + __Open Sans__ is used for the body text on the site. It is a sans-serif font and was selected for readibility as it designed for legibility across print, web, and mobile interfaces.
-
 
 ### Imagery
 
@@ -93,6 +91,15 @@ The website is comprised of five pages, four of which are accessible from the na
 
   + A footer which contains social media icon links to Facebook, Twitter, YouTube, Instagram, Discord, GitHub and GitLab pages. Additionally there is also a note of copyright for my work. Icons were used to keep the footer clean and tight and because they are universally recognisable.
 
+  +  As this project is part of a portfolio of work hosted on my personal domain of bovinehero.com I included my favicon image from the parent site which thanks to the github hosting engine auto presents itself in the address tab of the website. 
+
+  + A :cowboy_hat_face: emoji in the title of every page. I did this because game is set in the 1890s Lousisiana cowboys are a part of the theme and more importantly because I can and development without a little whimsy is a job.
+
+  + with the exception of 404.html an external stylesheet __assets/css/main.css__. I chose to follow the scss naming convention of 'main.css' for this as (while not in scope here) in future projects may wish to look at thematic style toggles and varaiblising style settings in future projects.
+
+  + keyword and description content for SEO as recommended by best practice.
+
+  + An image as a fixed background image with a black fallback to aid with simulating the atmosphere in the game. In smaller screens a scroll down will eventually take a user to the end of the image, but in larger screens it fills it regardless of scrolling position. 
 
 + index.html
   
@@ -164,113 +171,104 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 > OpenDyslexic should be a consideration for future projects.  I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style.  With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
 
-############################################################################# `NOTES BELOW`
-                
 
-## Global Features
+## Technologies Used
 
-### Favicon & Head Tags
+### Languages Used
 
-As this project is part of a portfolio of work hosted on my personal domain of bovinehero.com I included my favicon image from the parent site which thanks to the github hosting engine auto presents itself in the address tab of the website. I will be including this in all projects going forward that are hosted on this domain in order to 'sign' the work as part of my portfolio.  
+HTML and CSS were used to create this website.
 
-I also included the :cowboy_hat_face: emoji in the title of every page. I did this because:
+### Third Party Frameworks, Libraries & Programs Used
 
-1. The game is set in the 1890s Lousisiana cowboys are a part of the theme.
-2. Because we can and development without a little whimsy is a job.
+Balsamiq - Used to for wireframes.
 
-I started with the boilerplate meta tags that come packed with Visual Studio Code's http extensions to define `charset`, `http-equiv`, `content` and `viewport`
+Git - For version control.
 
-Registering with font awesome I was able to used some of their icons in various pages, but to be honest they were used so little within the site's pages that replacing them for smaller images may have improved loading performance.
+Github - To save and store the files for the website.
 
-I elected for an external stylesheet __assets/css/main.css__ for everything except for the custom 404 page as it is considered best practice. I chose to follow the scss naming convention of 'main.css' for this as (while not in scope here) in future projects may wish to look at thematic style toggles and varaiblising style settings in future projects.
+Github Pages (Jekyll) - to host the site 
 
-The content and description I added to aid in SEO.
+W3C validator - to test for syntax errors in HTML code
 
-``` html
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4038346e3a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <meta name="keywords" content="hunt showdown, hunt, huntz">
-    <meta name="description" content="Fan made site for Hunt: Showdown as part of Code Institute work">
-    <title> 🤠 Hunt Showdown | Home</title>
-</head>
-```
+Jigsaw CSS validator - check for syntactic errors in the css code 
 
-### Body Background
+Google Fonts - fonts used on the website were imported from here
 
-To provide a clean experience I reset the `margin`, `padding` and set the `box-sizing` to `border-box` as per best practice in the [mdm web docs](https://developer.mozilla.org/en-US/docs/Learn/CSS). I also set the border to none, so that if I wanted to include borders I could create them from scratch.
+Font Awesome - for iconography on the website
 
-``` css
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
-}
-```
+Google Dev Tools - troubleshooting and testing features as well as implement responsive styling
 
-Almost immediately I decided that I wanted an atmospheric background image to fill the page and scroll with the user, which I implemented this with the following code: 
+GitPod - for active development 
 
-``` css
-body {
-    position: relative;
-    min-height: 100vh;
-    background: url('../images/page-background.jpg') no-repeat center bottom fixed, black;
-  }
-```
+[Code Institute Development Template](https://github.com/Code-Institute-Org/gitpod-full-template) - for setting up the initial development environment
 
-Which created a fallback of black in the areas that the image would not cover and establishes an eerie lost in the dark effect.
-
-
-
-# Testing
-
-Screen Sizes
-Different Browsers
-
-## Validator Testing
-
-HTML - Ensure No errors were returned when passing through the official W3C validator
-CSS - Ensure No errors were found when passing through the official (Jigsaw) validator
-
-# Bugs
-
-The SignUp page includes css styling for form auto-complete that includes both background color and text color. These will not implemnt on every browser as user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable with CSS. 
-
-For example Chrome has the following in its internal stylesheet:
-
-``` css
-background-color: rgb(232, 240, 254) !important;
-background-image: none !important;
-color: -internal-light-dark(black, white) !important;
-```
-
-[ref](https://developer.mozilla.org/en-US/docs/Web/CSS/:autofill)
-
-This means auto-fill background-color, background-image, and color cannot be set reliabily without the inclusion of Javascript. 
-
-
-# Technologies Used
-
-Built in CSS and HTML, hosted on github pages, DNS service provided by Google DNS
-
-# Credits
-
-Special thanks for folks
-
-Google Fonts for the fonts
-
-Font Awesome for the icons
-
-Crytek for the game footage and the presspack
-
-Mozilla for the current standards
-
-[Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) for the idea on the CSS burger
+Tiny PNG - compressing images.
 
 [https://ezgif.com/](https://ezgif.com/) image conversion to webp
 
 [https://coolors.co/](https://coolors.co/) for colour pallette image
+
+Favicon.io - create favicon.
+
+Am I Responsive? - prototyping website image on a range of devices.
+
+Google DNS - hosting name resolution
+
+Jira Cloud - project management and task breakdown
+
+## Deployment & Local Development
+
+All of the following steps require a logged in github account.
+
+### Deployment
+Github Pages was used to deploy the live website. 
+The instructions to achieve this are available [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+### How to Fork
+To fork this repository:
+
+1. Go to the repository for this project.
+2. Click the Fork button in the top right corner.
+
+### How to Clone
+To clone this repository:
+
+1. Go to the repository for this project.
+2. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+3. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+4. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+## Testing
+
+Full testing details can be found in the [TESTING.md](TESTING.md) document.
+
+## Credits
+
+### Code Used
+
+[W3C Schools](https://www.w3schools.com/) for proof of concept attempts
+[css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for a primer on flexbox
+[mdm web docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) for various
+Love Running for inspiration on the Sign UP form and animation primer on hero banner.
+[Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) for how to implement a CSS burger
+
+
+### Content
+Text Content for the website was written by the Crytek Employees and was ourced from the store [Page](https://eu-shop.crytek.com/games/hunt-showdown).
+Block quotes for testamonials are cited within the web documents.
+
+### Media
+Images from the official Hunt Showdown [site](https://www.huntshowdown.com/media) presspack
+Images from the Crytek Store [Page](https://eu-shop.crytek.com/games/hunt-showdown)
+Collector's edition from the Steam Store [Page](https://store.steampowered.com/bundle/12841/Hunt_Showdown__Collectors_Edition/)
+YouTube Video from the official Crytek YouTube [Channel](https://www.youtube.com/c/HuntShowdown)
+
+## Acknowledgments
+I would like to acknowledge the following people who helped me along the way in completing my first CI project:
+
+Crytek - Creator Hunt: Showdown for inspiring the site.
+Ed Bradly - for his insights into flexbox, grid and why mobile first will save you from headaches
+Kera Cudmore - for providing insight into readme layout, without it I'd still be typing.
+Stuart Grant - for his ruthless (but fair) feedback of a first attempt at a website.
+Calumn Dennis & Joao Higino - for their peer feedback, helping to make the site better. 
+Mo Shami - for being the mentor that set me on the right path anf dprovided me with mid and final feedback prioir to submission.
