@@ -1,7 +1,10 @@
 # Hunt Showdown
+![image responsive design repo banner image](assets/images/docs/git-header.png)
 
 > TODO Images sizes
 > TODO Wireframe Links
+
+[Live Site](https://bovinehero.com/hunt-showdown/index.html)
 
 ## User Experience
 
@@ -43,7 +46,7 @@ Initially I looked into building this site desktop first rather than a mobile fi
 
 ### Colour
 
-![image color pallette](assets/images/palette.svg)
+![image color pallette](assets/images/docs/palette.svg)
 
 Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 

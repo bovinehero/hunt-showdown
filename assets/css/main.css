@@ -253,7 +253,6 @@ header {
   flex-flow: column wrap;
   justify-content: space-around;
   margin: 0 5%;
-  /* padding: 20px 0; */
 }
 
 #product > div {
@@ -261,7 +260,7 @@ header {
   align-self: center;
   font-size: 1rem;
   padding: 1rem 1rem;
-  background: no-repeat center center , rgba(60, 60, 60, 0.4); 
+  background: no-repeat center center , rgba(60, 60, 60, 0.7); 
 }
 
 #product h2 {
@@ -553,12 +552,6 @@ footer {
   #gallery {
     column-count: 2;
     }
-  /* .form-section {
-    justify-content: flex-start;
-  }
-  .signup-form {
-    max-width: 60%;
-  } */
 }
 
 @media screen and (min-width: 1024px) {
@@ -653,7 +646,6 @@ footer {
   #buy-the-game {
     justify-content: space-evenly;
   }
-
 }
 
 @media screen and (prefers-reduced-motion) {
