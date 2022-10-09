@@ -267,8 +267,13 @@ YouTube Video from the official Crytek YouTube [Channel](https://www.youtube.com
 I would like to acknowledge the following people who helped me along the way in completing my first CI project:
 
 Crytek - Creator Hunt: Showdown for inspiring the site.
+
 Ed Bradly - for his insights into flexbox, grid and why mobile first will save you from headaches
+
 Kera Cudmore - for providing insight into readme layout, without it I'd still be typing.
+
 Stuart Grant - for his ruthless (but fair) feedback of a first attempt at a website.
+
 Calumn Dennis & Joao Higino - for their peer feedback, helping to make the site better. 
+
 Mo Shami - for being the mentor that set me on the right path anf dprovided me with mid and final feedback prioir to submission.
