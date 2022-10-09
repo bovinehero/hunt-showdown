@@ -394,23 +394,31 @@ header {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  height: 700px;
-  max-width: 100%;
+  width: 100%;
   background: url("../images/signup/signup-form.webp");
   background-size: cover;
   background-position: center;
 }
 
 /* TODO fix the child divs to work with flex */
-.signup-form {
-  background-color: rgba(60, 60, 60, 0.6);
-  padding: 30px;
+.signup-form, .find-us {
+  background-color: rgba(60, 60, 60, 1);
+  padding: 10px;
   margin: 10%;
   max-width: 100%;
 }
 
 .signup-form > h2 {
   margin-bottom: 20px;
+}
+
+.find-us h2 {
+  margin-bottom: 20px;
+}
+
+.find-us a {
+  color: blanchedalmond;
+  text-decoration: none;
 }
 
 .text-input, .date-input {
@@ -546,12 +554,12 @@ footer {
   #gallery {
     column-count: 2;
     }
-  .form-section {
+  /* .form-section {
     justify-content: flex-start;
   }
   .signup-form {
     max-width: 60%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1024px) {
