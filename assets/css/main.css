@@ -393,6 +393,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   height: 700px;
   max-width: 100%;
   background: url("../images/signup/signup-form.webp");
@@ -400,6 +401,7 @@ header {
   background-position: center;
 }
 
+/* TODO fix the child divs to work with flex */
 .signup-form {
   background-color: rgba(60, 60, 60, 0.6);
   padding: 30px;
