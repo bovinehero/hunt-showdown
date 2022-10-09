@@ -400,7 +400,6 @@ header {
   background-position: center;
 }
 
-/* TODO fix the child divs to work with flex */
 .signup-form, .find-us {
   background-color: rgba(60, 60, 60, 1);
   padding: 10px;
