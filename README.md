@@ -1,10 +1,65 @@
 # Hunt Showdown
-![image responsive design repo banner image](assets/images/docs/git-header.png)
+(Developer: Gary Grant)
+
+![Mockup image](assets/images/docs/git-header.png)
 
 > TODO Images sizes
 > TODO Wireframe Links
 
 [Live Site](https://bovinehero.com/hunt-showdown/index.html)
+
+## Table of Content
+
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Client Goals](#client-goals)
+2. [User Experience](#user-experience)
+    1. [Key Information on the Site](#key-information)
+    2. [Target Audience](#target-audience)
+    3. [User Requrements and Expectations](#user-requrements-and-expectations)
+    4. [User Stories](#user-stories)
+3. [Design](#design)
+    1. [Design Considerations](#design-considerations)
+    2. [Colour](#colour)
+    3. [Fonts](#fonts)
+    5. [Imagery](#imagery)
+    4. [Structure](#structure)
+    5. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+5. [Features](#features)
+    1. [Future Implementations](#future-implementations)
+    2. [Accessibility](#accessibility-features)
+6. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Device testing](#performing-tests-on-various-devices)
+    6. [Browser compatibility](#browser-compatability)
+    7. [Testing user stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Deployment & Local Development](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgments](#acknowledgments)
+
+## Project Goals 
+
+
+### User Goals
++ To allow people to be able to sign up for updates on the game.
++ See example gameplay 
++ Purchase the game and it's DLC.
++ Find information on what the game is about.
++ Locate the company's office.
+
+### Client Goals
++ Promote the game.
++ Allow players to buy the game and additional DLC content.
++ Provide a way for new and existing players to contact the company.
++ Deliver information about the game to players.
+
 
 ## User Experience
 
@@ -14,35 +69,52 @@ Due to a recent growth in popularity Crytek has recently invested in the develop
 
 As a marketing site the main from the site is to enable sales to new and existing players and promote a way for them to keep up to date with new developments.
 
-## Key Information on the Site
+### Key Information on the Site
 + A description of what Hunt Showdown is.
 + How to buy the main game and it's DLC.
 + A way to sign up for news and get to the social media of the company.
 + Images depicting the main game and its themes.
 
+### Target Audience
++ PC gamers aged between 18 and 35
++ People looking for high risk, high reward competitive multiplayer
++ Existing Players looking for more Information / Content
++ People that like dark horror and western genres.
 
-## User Stories
+### User Requirements and Expectations
 
-### Client Goals
-+ To be able to view the site on a range of device sizes.
-+ To make it easy for potential players to find out what Hunt Showdown is and how to buy it.
-+ To allow people to be able to sign up for updates on the game.
++ A simple and intuitive navigation system
++ Quickly and easily find information
++ Links and functions that work as expected
++ Good presentation and a visually appealing design that fits within the hunt theme regardless of screen size
++ An easy way to contact the company
++ Simple content that the user can skim read
++ Accessibility
 
-### First Time Visitor Goals
-+ I would like to know more about the game in order to make a decision should I buy it.
-+ I want to be able to navigate the site easily to find information.
-+ I would like to be able to be able to go and purchase this game from the site.
-+ I would like to be informed of upcoming events, features and community events.
+### User Stories
 
-### Returning Players Goals
-+ I would like to be able to be able to go and purchase additional content for this game from the site.
-+ I would like to be informed of upcoming events, features and community events
+#### First Time Visitor
+1. I would like to know more about the game in order to make a decision should I buy it.
+2. I want to be able to navigate the site easily to find information.
+3. I would like to be able to be able to go and purchase this game from the site.
+4. I would like to be informed of upcoming events, features and community events.
+5. I would like to be able to contact the company
+
+#### Returning Players
+6. I would like to be able to be able to go and purchase additional content for this game from the site.
+7. I would like to be informed of upcoming events, features and community events
+
+#### Site Owner 
+8. I want users to find news about upcoming events or changes in the game
+9. I want users to be able to get a feel for the game's themes
+10. I want the users to be able to contact us
 
 
-## Design Considerations
+## Design
+
+### Design Considerations
 
 Initially I looked into building this site desktop first rather than a mobile first, however while this provided ample learning opportunities it was not conducive to good design practice as positioning and sizing became a common cause for code refactors. Ultimately this led to a refactor of the initial build into a mobile responsive site after I had generated the base content in a large screen size.
-
 
 ### Colour
 
@@ -51,8 +123,6 @@ Initially I looked into building this site desktop first rather than a mobile fi
 Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 
 The colour palette was created using the [Coolors](https://coolors.co/) website.
-
-### Typography
 
 ### Fonts
 
@@ -68,6 +138,16 @@ As a faux advertising site, text components should have a minimum reliance on te
 
 The images used within the site are all available in the public presspack available from the Hunt: Showdown [website](https://www.huntshowdown.com/).
 
+### Structure
+
+The page is structured in a well know, recognizable, user friendly, and easy to learn way. Upon arriving to the website the user sees a familiar type of navigation bar with the restaurant logo on the left side and the navigation links to the right. 
+The website consists of four separate pages: 
++ A homepage with reviews, media, product description and a purchase the game call to action sections.
++ A store page where potential players can buy yhe game and it's DLC.
++ A image gallery with images showcasing the general feel of the game through concept art and gameplay screenshots.
++ A signup page with a signup form, a map and information about how to contact the business.
+
+Additionally there is a 404 page included that will return the website user to the home page.
 
 ### Wireframes
 
@@ -83,6 +163,48 @@ TODO - LINKME  Gallery Wireframe
 TODO - LINKME  Sign UP  Wireframe
 
 TODO - LINKME  404  Wireframe
+
+## Technologies Used
+
+### Languages
+
+HTML and CSS were used to create this website.
+
+### Frameworks & Tools
+
+[Balsamiq](https://balsamiq.com/wireframes/) - Used to for wireframes.
+
+[Github](https://github.com/) - To save and store the files for the website and for version control.
+
+[Github Pages](https://pages.github.com/) (Jekyll) - to host the site 
+
+[W3C validator](https://validator.w3.org/) - to test for syntax errors in HTML code
+
+[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) - check for syntactic errors in the css code 
+
+[Google Fonts](https://fonts.google.com/about) - fonts used on the website were imported from here
+
+[Font Awesome](https://fontawesome.com/search) - for iconography on the website
+
+[Google Dev Tools](https://developer.chrome.com/docs/devtools/) - troubleshooting and testing features as well as implement responsive styling
+
+[GitPod](https://www.gitpod.io/) - for active development 
+
+[Code Institute Development Template](https://github.com/Code-Institute-Org/gitpod-full-template) - for setting up the initial development environment
+
+[Tiny PNG](https://tinypng.com/) - compressing images.
+
+[https://ezgif.com/](https://ezgif.com/) image conversion to webp
+
+[https://coolors.co/](https://coolors.co/) for colour pallette image
+
+[Favicon.io](https://favicon.io/) - create favicon.
+
+[Am I Responsive?](https://ui.dev/amiresponsive) - prototyping website image on a range of devices.
+
+[Google DNS](https://developers.google.com/speed/public-dns) - hosting name resolution
+
+[Jira Cloud](https://www.atlassian.com/software/jira/free) - project management and task breakdown
 
 
 ## Features
@@ -163,7 +285,7 @@ The website is comprised of five pages, four of which are accessible from the na
 + Additionally I considered implementing a font switcher to leverage the [OpenDyslexic](https://opendyslexic.org/) font as a switchable font face but again the implementation seemed dependent on javascript.
 + The copyright section includes a date, I would like to have this updated based on the current year to lazy maintain the site, but I could not find a way to pull the date without server-side input or JavaScript.
 
-## Accessibility
+### Accessibility
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
 
 + Using semantic HTML.
@@ -174,50 +296,126 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 > OpenDyslexic should be a consideration for future projects.  I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style.  With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
 
+6. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Device testing](#performing-tests-on-various-devices)
+    6. [Browser compatibility](#browser-compatability)
+    7. [Testing user stories](#testing-user-stories)
 
-## Technologies Used
+## Testing
 
-### Languages Used
+### HTML Validation
 
-HTML and CSS were used to create this website.
+### CSS Validation
 
-### Third Party Frameworks, Libraries & Programs Used
+### Accessibility
 
-Balsamiq - Used to for wireframes.
+### Performance
 
-Git - For version control.
+### Device testing
 
-Github - To save and store the files for the website.
 
-Github Pages (Jekyll) - to host the site 
+### Browser compatibility
 
-W3C validator - to test for syntax errors in HTML code
 
-Jigsaw CSS validator - check for syntactic errors in the css code 
+### Testing user stories
 
-Google Fonts - fonts used on the website were imported from here
+1. As a __First Time Visitor__, I would like to know more about the game in order to make a decision should I buy it.
 
-Font Awesome - for iconography on the website
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Gallery | Navigate to the Gallery Page and scroll up and down | gallery images are rendered visible in the screen for a variety of screen sizes  | Works as expected |
+| YouTube Video | Navigate to index page scroll to YouTube video and click on it | YouTube player should start the video with imbedded YouTube controls | Works as expected |
+| Product Description | Navigate to index page scroll to product description section | text describing the game should be legible on a a variety of screen sizes  | Works as expected |
+| Product Testamonials | Navigate to index page scroll to testamonials section | citations with product reviews be legible on a a variety of screen sizes| Works as expected |
 
-Google Dev Tools - troubleshooting and testing features as well as implement responsive styling
+2. As a __First Time Visitor__, I want to be able to navigate the site easily to find information.
 
-GitPod - for active development 
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Header Nav Menu | At anytime click on the header hamburger menu when scrolling up or down on any page | display nav links to the other pages | Works as expected |
 
-[Code Institute Development Template](https://github.com/Code-Institute-Org/gitpod-full-template) - for setting up the initial development environment
+3. As a __First Time Visitor__, I would like to be able to be able to go and purchase this game from the site.
 
-Tiny PNG - compressing images.
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Home Page Purchase | Navigate to bottom of the Index Page and click the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
+| Game Edition Purchase | Navigate to the Store Page and DLC section, click on the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
+| DLC Purchase | Navigate to the Store Page and DLC section, click on the the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
 
-[https://ezgif.com/](https://ezgif.com/) image conversion to webp
 
-[https://coolors.co/](https://coolors.co/) for colour pallette image
+4. As a __First Time Visitor__, I would like to be informed of upcoming events, features and community events.
 
-Favicon.io - create favicon.
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Sign Up for the Hunt! form | Navigate to the Join the Posse! (Sign Up) Page and locate the Sign Up for the Hunt! form, fill out and submit | Data submited via contact form | Works as expected |
+| Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where live updates can be found | Works as expected |
 
-Am I Responsive? - prototyping website image on a range of devices.
+5. As a __First Time Visitor__, I would like to be able to contact the company
 
-Google DNS - hosting name resolution
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where customers can engage | Works as expected |
+| Email | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the email icon | If email client is installed, draft an email should appear |  Works as expected |
+| Map | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the map | User can explore the area near the address on google maps |  Works as expected |
 
-Jira Cloud - project management and task breakdown
+
+6. As a __Returning Player__, I would like to be able to be able to go and purchase additional content for this game from the site.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| DLC Purchase | Navigate to the Store Page and DLC section, click on the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
+
+7. As a __Returning Player__, I would like to be informed of upcoming events, features and community events
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Sign Up for the Hunt! form | Navigate to the Join the Posse! (Sign Up) Page and locate the Sign Up for the Hunt! form, fill out and submit | Data submited via contact form | Works as expected |
+| Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where live updates can be found | Works as expected |
+
+8. As the __Site Owner__, I want users to find news about upcoming events or changes in the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Sign Up for the Hunt! form | Navigate to the Join the Posse! (Sign Up) Page and locate the Sign Up for the Hunt! form, fill out and submit | Data submited via contact form | Works as expected |
+| Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media | Works as expected |
+
+9. As the __Site Owner__, I want users to be able to get a feel for the game's themes
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Gallery | Navigate to the Gallery Page and scroll up and down | gallery images are rendered visible in the screen for a variety of screen sizes  | Works as expected |
+| YouTube Video | Navigate to index page scroll to YouTube video and click on it | YouTube player should start the video with imbedded YouTube controls | Works as expected |
+| Product Description | Navigate to index page scroll to product description section | text describing the game should be legible on a a variety of screen sizes  | Works as expected |
+| Product Testamonials | Navigate to index page scroll to testamonials section | citations with product reviews be legible on a a variety of screen sizes| Works as expected |
+
+10. As the __Site Owner__, I want the users to be able to contact us
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where customers can engage | Works as expected |
+| Email | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the email icon | If email client is installed, draft an email should appear |  Works as expected |
+
+
+## Bugs
+
+### Sign Up Page auto-complete
+The SignUp page includes css styling for form auto-complete that includes both background color and text color. These will not implemnt on every browser as user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable with CSS. 
+
+For example Chrome has the following in its internal stylesheet:
+
+``` css
+background-color: rgb(232, 240, 254) !important;
+background-image: none !important;
+color: -internal-light-dark(black, white) !important;
+```
+
+[ref](https://developer.mozilla.org/en-US/docs/Web/CSS/:autofill)
+
+This means auto-fill background-color, background-image, and color cannot be set reliabily without the inclusion of Javascript. 
 
 ## Deployment & Local Development
 
@@ -240,10 +438,6 @@ To clone this repository:
 2. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 3. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 4. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
-
-## Testing
-
-Full testing details can be found in the [TESTING.md](TESTING.md) document.
 
 ## Credits
 
