@@ -309,6 +309,8 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 ### HTML Validation
 
+store.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fstore.html)
+
 ### CSS Validation
 
 ### Accessibility
