@@ -309,11 +309,24 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 ### HTML Validation
 
+The W3C Markup Validation Service was used to validate the HTML of the website. 
+
+index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Findex.html)
+gallery.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fgallery.html)
 store.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fstore.html)
+signup.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fsignup.html)
 
 ### CSS Validation
 
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+
+site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
 ### Accessibility
+
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
+
+TODO - link the pages
 
 ### Performance
 
