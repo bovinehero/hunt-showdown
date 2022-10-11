@@ -616,4 +616,4 @@ Stuart Grant - for his ruthless (but fair) feedback of a first attempt at a webs
 
 Calumn Dennis & Joao Higino - for their peer feedback, helping to make the site better. 
 
-Mo Shami - for being the mentor that set me on the right path anf dprovided me with mid and final feedback prioir to submission.
+Mo Shami - for being the mentor that set me on the right path and provided me with mid and final feedback prioir to submission.
