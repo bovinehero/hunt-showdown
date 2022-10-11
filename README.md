@@ -1,7 +1,7 @@
 # Hunt Showdown
 (Developer: Gary Grant)
 
-![Mockup image](assets/images/docs/git-header.png)
+![Mockup image](docs/git-header.png)
 
 > TODO Images sizes
 > TODO Wireframe Links
@@ -118,7 +118,7 @@ Initially I looked into building this site desktop first rather than a mobile fi
 
 ### Colour
 
-![image color pallette](assets/images/docs/palette.svg)
+![image color pallette](docs/palette.svg)
 
 Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 
@@ -182,6 +182,8 @@ HTML and CSS were used to create this website.
 
 [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) - check for syntactic errors in the css code 
 
+[WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) - check accessibility
+
 [Google Fonts](https://fonts.google.com/about) - fonts used on the website were imported from here
 
 [Font Awesome](https://fontawesome.com/search) - for iconography on the website
@@ -194,9 +196,9 @@ HTML and CSS were used to create this website.
 
 [Tiny PNG](https://tinypng.com/) - compressing images.
 
-[https://ezgif.com/](https://ezgif.com/) image conversion to webp
+[ezgif](https://ezgif.com/) image conversion to webp
 
-[https://coolors.co/](https://coolors.co/) for colour pallette image
+[Coolors.co](https://coolors.co/) for colour pallette image
 
 [Favicon.io](https://favicon.io/) - create favicon.
 
@@ -326,9 +328,22 @@ site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fb
 
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
 
-TODO - link the pages
+index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/index.html)
+gallery.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/gallery.html)
+store.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/store.html)
+signup.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/signup.html)
 
 ### Performance
+
+index.html
+
+Issues:
+
+| **Section** | **Feature** |**Issue Description** | **Comment** |
+|-------------|------------|---------------------|
+| Performance | YouTube Video | Some third-party resources can be lazy loaded with a facade | Facade placeholder requires JavaScript, beyond scope of project |
+| Performance | YouTube Video | Does not use passive listeners to improve scrolling performance | Imported from the video, this is a JavaScript optimization, beyond scope of project |
+| Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
 
 ### Device testing
 

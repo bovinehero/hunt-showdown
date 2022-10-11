@@ -283,6 +283,19 @@ header {
 
 /* Store Page */
 
+.page-header {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.page-header > h2{
+  padding: 1rem;
+}
+
+.page-header > p{
+  padding: 0 1rem 1rem 1rem;
+}
+
 #games, #dlc {
   display: flex;
   flex-flow: row wrap;
