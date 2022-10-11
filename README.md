@@ -3,7 +3,6 @@
 
 ![Mockup image](docs/git-header.png)
 
-> TODO Images sizes
 > TODO Wireframe Links
 
 [Live Site](https://bovinehero.com/hunt-showdown/index.html)
@@ -36,9 +35,9 @@
     2. [CSS Validation](#CSS-validation)
     3. [Accessibility](#accessibility)
     4. [Performance](#performance)
-    5. [Device testing](#performing-tests-on-various-devices)
-    6. [Browser compatibility](#browser-compatability)
-    7. [Testing user stories](#testing-user-stories)
+    5. [Device Testing](#performing-tests-on-various-devices)
+    6. [Browser Compatibility](#browser-compatability)
+    7. [Testing User Stories](#testing-user-stories)
 8. [Bugs](#bugs)
 9. [Deployment & Local Development](#deployment)
 10. [Credits](#credits)
@@ -299,11 +298,6 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 > OpenDyslexic should be a consideration for future projects.  I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style.  With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
 
-6. [Testing](#validation)
-
-    5. [Device testing](#performing-tests-on-various-devices)
-    6. [Browser compatibility](#browser-compatability)
-
 ## Testing
 
 ### HTML Validation
@@ -358,10 +352,13 @@ More information about this in the [Bugs](#bugs) section
 
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
 
-index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/index.html)
-gallery.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/gallery.html)
-store.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/store.html)
-signup.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/signup.html)
++ index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/index.html)
+
++ gallery.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/gallery.html)
+
++ store.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/store.html)
+
++ signup.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/signup.html)
 
 All of the pages shared the same issues
 
@@ -452,10 +449,18 @@ Issues:
 
 
 ### Device testing
+The website was tested on the following devices:
+
+1. MacBook Pro
+2. IPhone 13
+3. In addition, the website was tested using Google Chrome Developer Tools Device emulation for all available device options plus a custom setting for IPhone 5
 
 
-### Browser compatibility
+### Browser Compatibility
+The website was tested on the following browsers:
 
+1. Google Chrome
+2. Mozilla Firefox
 
 ### Testing user stories
 
