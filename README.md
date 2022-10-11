@@ -286,6 +286,7 @@ The website is comprised of five pages, four of which are accessible from the na
 + I would like to have implemented a colour switcher to allow for different color deficient vision types. I researched dark mode and css theme switches to try and work out a way to implement this. However within the timeframe I had allocated for the project I was unable to deliver on this without the use of javascript. 
 + Additionally I considered implementing a font switcher to leverage the [OpenDyslexic](https://opendyslexic.org/) font as a switchable font face but again the implementation seemed dependent on javascript.
 + The copyright section includes a date, I would like to have this updated based on the current year to lazy maintain the site, but I could not find a way to pull the date without server-side input or JavaScript.
++ An interactive gallery to include of smaller images on the gallery wall on page load and larger ones when focus is shifted or image is selected for download. Again I could not find a way to create this functionality without JavaScript.
 
 ### Accessibility
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
@@ -341,9 +342,27 @@ Issues:
 
 | **Section** | **Feature** |**Issue Description** | **Comment** |
 |-------------|------------|---------------------|
+| Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
 | Performance | YouTube Video | Some third-party resources can be lazy loaded with a facade | Facade placeholder requires JavaScript, beyond scope of project |
 | Performance | YouTube Video | Does not use passive listeners to improve scrolling performance | Imported from the video, this is a JavaScript optimization, beyond scope of project |
+
+store.html
+
+Issues:
+
+| **Section** | **Feature** |**Issue Description** | **Comment** |
+|-------------|------------|---------------------|
 | Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
+
+gallery.html
+
+Issues:
+
+| **Section** | **Feature** |**Issue Description** | **Comment** |
+|-------------|------------|---------------------|
+| Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
+| Performance | Properly size images | Serve images that are appropriately-sized to save cellular data and improve load time | An image resize is in the range of kbs per image, as the site is not based in high speed realtime transactions I decided to preserve the original sizes for better quality on download rather than page view. |
+
 
 ### Device testing
 
