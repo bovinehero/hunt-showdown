@@ -39,7 +39,7 @@
     5. [Device testing](#performing-tests-on-various-devices)
     6. [Browser compatibility](#browser-compatability)
     7. [Testing user stories](#testing-user-stories)
-8. [Bugs](#Bugs)
+8. [Bugs](#bugs)
 9. [Deployment & Local Development](#deployment)
 10. [Credits](#credits)
 11. [Acknowledgments](#acknowledgments)
@@ -300,13 +300,9 @@ I have been mindful during coding to ensure that the website is as accessible fr
 > OpenDyslexic should be a consideration for future projects.  I considered implementing a specialist typeface to try and eliviate common symptoms dyslexia either as the primary fontface or as a switchable style.  With a little research I discovered the [OpenDyslexic](https://opendyslexic.org/) font which provided the means to meet this requirement, however as the primary font it detracted from the asthetic of the site. Instead I looked into implementing a switchable stylesheet for accessibility however implementation seemed dependent on either javascript or serverside technologies - both of which were out of scope for this project.
 
 6. [Testing](#validation)
-    1. [HTML Validation](#HTML-validation)
-    2. [CSS Validation](#CSS-validation)
-    3. [Accessibility](#accessibility)
-    4. [Performance](#performance)
+
     5. [Device testing](#performing-tests-on-various-devices)
     6. [Browser compatibility](#browser-compatability)
-    7. [Testing user stories](#testing-user-stories)
 
 ## Testing
 
@@ -314,16 +310,49 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 The W3C Markup Validation Service was used to validate the HTML of the website. 
 
-index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Findex.html)
-gallery.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fgallery.html)
-store.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fstore.html)
-signup.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fsignup.html)
+index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Findex.html) - No Errors Found
+
+1 Warning displayed
+
+| **Level** | **Feature** | **Issue Description** | **Comment** |
+|-------------|-------------|----------------------|-------------|
+| Warning | `<section id="media-section">` | Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed. | section includes an iframe with appropriate title as the only content for additional semantic information |
+
+store.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fstore.html) - No Errors Found
+
+gallery.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fgallery.html) - No Errors Found
+
+1 Warning displayed
+
+| **Level** | **Feature** | **Issue Description** | **Comment** |
+|-------------|-------------|----------------------|-------------|
+| Warning | `<section id="gallery">` | Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed. | Section includes an image content only with appropriate alt tags and is preceeded with a page title section |
+
+signup.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2Fsignup.html) - No Errors Found
 
 ### CSS Validation
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
 
-site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fhunt-showdown%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Error Found.
+
+11 Warnings which were implemented in order to try and preserve the autofill experience between browsers:
+
+| **Feature** | **Issue Description** |
+|-------------|----------------------|
+| .text-input:autofill |	Same color for background-color and border-top-color |
+| .text-input:autofill |	Same color for background-color and border-right-color |
+| .text-input:autofill |	Same color for background-color and border-bottom-color |
+| .text-input:autofill |	Same color for background-color and border-left-color |
+| | :-webkit-autofill is a vendor extended pseudo-class |
+| .text-input:-webkit-autofill |	Same color for background-color and border-top-color |
+| .text-input:-webkit-autofill |	Same color for background-color and border-right-color |
+| .text-input:-webkit-autofill |	Same color for background-color and border-bottom-color |
+| .text-input:-webkit-autofill |	Same color for background-color and border-left-color |
+|	| :-ms-input-placeholder is a vendor extended pseudo-class |
+|	::-ms-input-placeholder is a vendor extended pseudo-element |
+
+More information about this in the [Bugs](#bugs) section
 
 ### Accessibility
 
@@ -334,34 +363,92 @@ gallery.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hu
 store.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/store.html)
 signup.html [results](https://wave.webaim.org/report#/https://bovinehero.com/hunt-showdown/signup.html)
 
+All of the pages shared the same issues
+
+#### Errors
+
+In every Page Header there is An Error stating __A form label is present, but does not contain any content.__
+Meaning the form label is associated with an existing form control (using for/id or surrounds the form control), but does not contain any text or images with alternative text.
+
+The content for this is section is the CSS hamburger menu, it is animated CSS and so cannot have any text or images with alternative text:
+
+``` css
+<input class="side-menu" type="checkbox" id="side-menu"/>
+<label class="burger" for="side-menu"><span class="burger-line"></span></label>
+```
+
+I have tried to address this by referencing the functionality as a checkbox so a user 'on click' will get access to the menu, the label addresses the relationship in it's for.
+
+Because the animation that manipulates the menu is a css manipulation a screen reader should still be able to refernce the menu anyway, the code below is not dynamically generated it is just obfuscated from view: 
+
+``` html
+<nav class="nav-menu">
+  <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="store.html">Store</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="signup.html">Join the Posse!</a></li>
+  </ul>
+</nav>
+```
+
+#### Alerts
+
+This also ties into the Alert seen on every page: __Adjacent links go to the same URL__
+The Nav Bar positioning is beside the logo text, both of which have links back to the home (index.html) page. It is common (if not expected) convention for the logo to take a user home in addition to a link back to the home page.
+
+The Index page has an alert to __Ensure that YouTube video presents equivalent, synchronized captions__. This video doesn't have captions outside of the auto generated ones on YouTube Website. However as the media content was the offical video trailer for the game from the publisher I felt changing this to a captioned video is out of scope for this project.
+
 ### Performance
 
-index.html
+Performance testing was performed on lighthouse in Google Chrome's DevTools
+
+#### index.html
+
+![lighthouse summary image for index page](docs/lighthouse-index.png)
+
 
 Issues:
 
 | **Section** | **Feature** |**Issue Description** | **Comment** |
-|-------------|------------|---------------------|
+|-------------|-------------|----------------------|-------------|
 | Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
 | Performance | YouTube Video | Some third-party resources can be lazy loaded with a facade | Facade placeholder requires JavaScript, beyond scope of project |
 | Performance | YouTube Video | Does not use passive listeners to improve scrolling performance | Imported from the video, this is a JavaScript optimization, beyond scope of project |
 
-store.html
+#### store.html
+
+![lighthouse summary image for store page](docs/lighthouse-store.png)
 
 Issues:
 
 | **Section** | **Feature** |**Issue Description** | **Comment** |
-|-------------|------------|---------------------|
+|-------------|-------------|----------------------|-------------|
 | Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
 
-gallery.html
+#### gallery.html
+
+![lighthouse summary image for gallery page](docs/lighthouse-gallery.png)
 
 Issues:
 
 | **Section** | **Feature** |**Issue Description** | **Comment** |
-|-------------|------------|---------------------|
+|-------------|-------------|----------------------|-------------|
 | Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
-| Performance | Properly size images | Serve images that are appropriately-sized to save cellular data and improve load time | An image resize is in the range of kbs per image, as the site is not based in high speed realtime transactions I decided to preserve the original sizes for better quality on download rather than page view. |
+| Performance | Gallery images | Serve images that are appropriately-sized to save cellular data and improve load time | An image resize is in the range of kbs per image, as the site is not based in high speed realtime transactions I decided to preserve the original sizes for better quality on download rather than page view. |
+
+
+#### signup.html
+
+![lighthouse summary image for signup page](docs/lighthouse-signup.png)
+
+Issues:
+
+| **Section** | **Feature** |**Issue Description** | **Comment** |
+|-------------|-------------|----------------------|-------------|
+| Performance | Site Loadins | Serve static assets with an efficient cache policy | Limitation of gitpages as this is a serverside fix |
+| Performance | Map IFrame | Does not use passive listeners to improve scrolling performance | Does not use passive listeners to improve scrolling performance | Imported from the video, this is a JavaScript optimization, beyond scope of project |
+
 
 
 ### Device testing
@@ -465,6 +552,8 @@ color: -internal-light-dark(black, white) !important;
 [ref](https://developer.mozilla.org/en-US/docs/Web/CSS/:autofill)
 
 This means auto-fill background-color, background-image, and color cannot be set reliabily without the inclusion of Javascript. 
+
+I did use some vendor specific pseudo components in order to try and establish some form of uniformity for cross browser experience, but the results are not consistent.
 
 ## Deployment & Local Development
 
