@@ -231,19 +231,25 @@ The website is comprised of five pages, four of which are accessible from the na
 + All Pages on the website have:
 
   + A responsive navigation bar at the top which allows the user to navigate through the site. To the left of the navigation bar is the logo text and to to the right of the navigation bar is an animated CSS hamburger menu which gives access to the website pages. To allow a good user experience of the site, the navigation bar is a minimal height and sticky to allow intra site navigation at any point in scrolling the various pages. The hamburger was implemented to give the site a clean look and to promote a good mobile first user experience, anecdotally users are used to seeing the burger icon when on mobile devices to navigate a site, and because a non javascript burger menu would provide ample practice with CSS animations I adapted code from [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) to implement the CSS burger.
-  + Nav menu closed. ![nav menu closed](docs/images/feature-menu-closed.png)
+    + Nav menu closed. <br> ![nav menu closed](docs/images/feature-menu-closed.png)
 
-  + Nav menu open. ![nav menu open](docs/images/feature-menu-open.png)
+    + Nav menu open. <br> ![nav menu open](docs/images/feature-menu-open.png)
 
   + A footer which contains social media icon links to Facebook, Twitter, YouTube, Instagram, Discord, GitHub and GitLab pages. Additionally there is also a note of copyright for my work. Icons were used to keep the footer clean and tight and because they are universally recognisable.
+    + Footer. <br> ![nav menu closed](docs/images/feature-footer.png)
 
   +  As this project is part of a portfolio of work hosted on my personal domain of bovinehero.com I included my favicon image from the parent site which thanks to the github hosting engine auto presents itself in the address tab of the website. 
+     + Custom Hosting URL. <br> ![nav menu closed](docs/images/feature-custom-dns.png)
 
   + A :cowboy_hat_face: emoji in the title of every page. I did this because game is set in the 1890s Lousisiana cowboys are a part of the theme and more importantly because I can and development without a little whimsy is a job.
 
   + with the exception of 404.html an external stylesheet __assets/css/main.css__. I chose to follow the scss naming convention of 'main.css' for this as (while not in scope here) in future projects may wish to look at thematic style toggles and varaiblising style settings in future projects.
 
-  + keyword and description content for SEO as recommended by best practice.
+  + keyword and description content for SEO as recommended by best practice. (Gallery Example)
+    ``` html
+    <meta name="keywords" content="hunt showdown, hunt, huntz">
+    <meta name="description" content="Gallery of Concept art and screen captures from Hunt: Showdown as part of Code Institute work">
+    ```
 
   + An image as a fixed background image with a black fallback to aid with simulating the atmosphere in the game. In smaller screens a scroll down will eventually take a user to the end of the image, but in larger screens it fills it regardless of scrolling position. 
 
@@ -253,6 +259,7 @@ The website is comprised of five pages, four of which are accessible from the na
     + A big driver in the game is that a single shot can kill and often that shot comes in the dark from an unkown location, both the image and the zoom out we selected to try and achieve this effect.
     + For accessibility this animation is deactivated via a `prefers-reduced-motion` media query in `main.css`
     + The fixed text over the banner image has a colour change to blood red of the `<span>die alone.</span>`, to highlight the frailty your player character has in the game. The transition here is slower and doesn't include motion so the color change persists over reduced motion preference.
+    + Hero banner: <br> ![hero banner](docs/images/feature-hero-banner.png)
   
   + Testimonials: a flex row wrapped div with a title and 3 favourable reviews of the game.
   
@@ -276,27 +283,40 @@ The website is comprised of five pages, four of which are accessible from the na
     + On larger screens this is presented as 2 distinct rows, but the use of flex wrap ensures that on smaller screens this moves naturally into a column view without the need to refactor.
     + For the DLC items I elected for fixed narrower width so that the text and background image for the store item would remain consistent within screen sizes and to allow a bit more content on a row.
     + I wanted the game purchase boxes to be fairly large on the page to consume more real estate on a row in both the index and store pages. However the available image sizes limited the box sizes to around 400px (double the width) of the DLC components.
+    + Game Purchase: <br> ![Game Purchase Feature](docs/images/feature-game-purchase.png)
+    + DLC Purchase: <br> ![DLC Purchase Feature](docs/images/feature-dlc-purchase.png)
 
 + gallery.html
 
   + Assorted image size gallery: a composed of of various media from a press pack download the official Hunt Showdown [site](https://www.huntshowdown.com/media) arranged into a column defined section.
     + I implemented a column-gap in the section to provide horizontal spacing and set the image widths to be 100% of the column in order to make resizing easy for a single image source.
     + Smaller screens recieve a single column containing pictures as the default, screen resolutions increase the number of columns gradually increase to 4 via use of media queries, ensuring the gallery consumes more of the screen as it gets larger.
+    + Gallery in narrow (portrait) view: <br> ![Gallery in portrait view](docs/images/feature-gallery-portrait.png)
+    + Gallery in wide (landscape) view: <br> ![Gallery in landscape view](docs/images/feature-gallery-landscape.png)
 
 + signup.html
 
   + Signup Form:  
     + this was heavily influenced by the love running project within the course. Originally I'd planned for this to be a modal either launched from the footer or in the sticky menu but could not work out a clean way to do this without javascript.
-    + By default the form is positioned to the left by default and use all the horizontal space with a max-width of 100%, fixed padding size or 30px but a flexible 10% margin. This was in an attempt to make it use as much space as possible without consuming the entire screen asthetically pleasing in smaller screens. 
-    + As the viewing port becomes larger we use proportionally reduce the max-width in the media queries to avoid making the form look stretched accross the section. - By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
+    + The production version uses flex to share space with the map, however it was originally implemented as:
+      + By default the form is positioned to the left by default and use all the horizontal space with a max-width of 100%, fixed padding size or 30px but a flexible 10% margin. This was in an attempt to make it use as much space as possible without consuming the entire screen asthetically pleasing in smaller screens. 
+      + As the viewing port becomes larger we use proportionally reduce the max-width in the media queries to avoid making the form look stretched accross the section. - By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
     + The form uses client side validation for the email address via the following regex: `pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"`
     + The submitters Name is not required as this constitutes PII, which we don't need in order to send someone an email style news letter. PII needs robust data handling practices, this ids an overhead I do not want to manage at this stage.
+    + Newsletter Signup form: <br> ![Sign up form](docs/images/feature-signup-form.png)
+
+  + Map & Contact Us:
+    + This feature was a late addition to the project based on user feedback and was added to the form section prompting a refactor from point positioning to flex
+    + There is a mailto link as well as a google maps iframe import to a location deep in the Louisana Bayou, whee the game takes place.
+    + Map & contact us: <br> ![Map and contact us](docs/images/feature-map.png)
+
 
 + 404.html
 
   + Leverages the github pages jekyll engine to provide a custom 404 experience for users. 
     + Styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
     + Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if non-existant child directories are inputted into the url.
+    + Link back home: <br> ![return to the home page](docs/images/feature-404.png)
 
 ### Future Implementations
 
