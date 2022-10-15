@@ -11,9 +11,9 @@
     1. [User Goals](#user-goals)
     2. [Client Goals](#client-goals)
 2. [User Experience](#user-experience)
-    1. [Key Information on the Site](#key-information)
+    1. [Key Information on the Site](#key-information-on-the-site)
     2. [Target Audience](#target-audience)
-    3. [User Requrements and Expectations](#user-requrements-and-expectations)
+    3. [User Requirements and Expectations](#user-requirements-and-expectations)
     4. [User Stories](#user-stories)
 3. [Design](#design)
     1. [Design Considerations](#design-considerations)
@@ -24,17 +24,17 @@
     5. [Wireframes](#wireframes)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
-    2. [Frameworks & Tools](#frameworks-&-tools)
+    2. [Frameworks and Tools](#frameworks-and-tools)
 5. [Features](#features)
     1. [Future Implementations](#future-implementations)
-    2. [Accessibility](#accessibility-features)
-6. [Testing](#validation)
+    2. [Accessibility Features](#accessibility-features)
+6. [Testing](#testing)
     1. [HTML Validation](#HTML-validation)
     2. [CSS Validation](#CSS-validation)
     3. [Accessibility](#accessibility)
     4. [Performance](#performance)
-    5. [Device Testing](#performing-tests-on-various-devices)
-    6. [Browser Compatibility](#browser-compatability)
+    5. [Device Testing](#device-testing)
+    6. [Browser Compatibility](#browser-compatibility)
     7. [Testing User Stories](#testing-user-stories)
 8. [Bugs](#bugs)
 9. [Deployment & Local Development](#deployment)
@@ -186,7 +186,7 @@ Later iterations of the CSS flipped to mobile first approach, changes were adapt
 
 HTML and CSS were used to create this website.
 
-### Frameworks & Tools
+### Frameworks and Tools
 
 [Balsamiq](https://balsamiq.com/wireframes/) - Used to for wireframes.
 
@@ -327,7 +327,7 @@ The website is comprised of five pages, four of which are accessible from the na
 + The copyright section includes a date, I would like to have this updated based on the current year to lazy maintain the site, but I could not find a way to pull the date without server-side input or JavaScript.
 + An interactive gallery to include of smaller images on the gallery wall on page load and larger ones when focus is shifted or image is selected for download. Again I could not find a way to create this functionality without JavaScript.
 
-### Accessibility
+### Accessibility Features
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
 
 + Using semantic HTML.
