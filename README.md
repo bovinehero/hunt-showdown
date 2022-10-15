@@ -3,8 +3,6 @@
 
 ![Mockup image](docs/images/git-header.png)
 
-> TODO Wireframe Links
-
 [Live Site](https://bovinehero.com/hunt-showdown/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
 ## Table of Content
@@ -115,7 +113,7 @@ Initially I looked into building this site desktop first rather than a mobile fi
 
 ### Colour
 
-![image color pallette](docs/images/palette.svg)
+![image color pallette](docs/images/palette.png)
 
 Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 
@@ -148,28 +146,39 @@ Additionally there is a 404 page included that will return the website user to t
 
 ### Wireframes
 
-Wireframes were created for desktop as a desktop first approach was initially considered. 
-Later iterations of the CSS flipped to mobile first approach, changes were adapted to work with the smaller screen on the fly within limitations of the screen real estate.
-
-Home Page Wireframe 
-
-![wireframe image for index page](docs/images/wireframe-index.png)
-
-Store Page Wireframe
-
-![wireframe image for store page](docs/images/wireframe-store.png)
-
-Gallery Page Wireframe
-
-![wireframe image for Gallery page](docs/images/wireframe-gallery.png)
-
-Sign UP  Page Wireframe
-
-![wireframe image for Sign Up page](docs/images/wireframe-signup.png)
-
-404 Page Wireframe
-
-![wireframe image for 404 page](docs/images/wireframe-404.png)
+Wireframes were created for desktop as a desktop first approach was initially considered, the wireframes below show the initial concept for the site. 
+<br>
+<details>
+<summary>Home Page Wireframe </summary>
+<br>
+<img alt="wireframe image for index page" src="docs/images/wireframe-index.png">
+</details>
+<br>
+<details>
+<summary>Store Page Wireframe</summary>
+<br>
+<img alt="wireframe image for store page" src="docs/images/wireframe-store.png">
+</details>
+<br>
+<details>
+<summary>Gallery Page Wireframe</summary>
+<br>
+<img alt="wireframe image for Gallery page" src="docs/images/wireframe-gallery.png">
+</details>
+<br>
+<details>
+<summary>Sign UP  Page Wireframe</summary>
+<br>
+<img alt="wireframe image for Sign Up page" src="docs/images/wireframe-signup.png">
+</details>
+<br>
+<details>
+<summary>404 Page Wireframe</summary>
+<br>
+<img alt="wireframe image for 404 page" src="docs/images/wireframe-404.png">
+</details>
+<br>
+Later iterations of the CSS flipped to mobile first approach, changes were adapted on the fly to work with the smaller screen size. I did not generate fresh wireframes for the mobile approach as changes were organic based on trial and error and user feedback.
 
 ## Technologies Used
 
@@ -222,6 +231,9 @@ The website is comprised of five pages, four of which are accessible from the na
 + All Pages on the website have:
 
   + A responsive navigation bar at the top which allows the user to navigate through the site. To the left of the navigation bar is the logo text and to to the right of the navigation bar is an animated CSS hamburger menu which gives access to the website pages. To allow a good user experience of the site, the navigation bar is a minimal height and sticky to allow intra site navigation at any point in scrolling the various pages. The hamburger was implemented to give the site a clean look and to promote a good mobile first user experience, anecdotally users are used to seeing the burger icon when on mobile devices to navigate a site, and because a non javascript burger menu would provide ample practice with CSS animations I adapted code from [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) to implement the CSS burger.
+  + Nav menu closed. ![nav menu closed](docs/images/feature-menu-closed.png)
+
+  + Nav menu open. ![nav menu open](docs/images/feature-menu-open.png)
 
   + A footer which contains social media icon links to Facebook, Twitter, YouTube, Instagram, Discord, GitHub and GitLab pages. Additionally there is also a note of copyright for my work. Icons were used to keep the footer clean and tight and because they are universally recognisable.
 
