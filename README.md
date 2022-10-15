@@ -1,11 +1,11 @@
 # Hunt Showdown
 (Developer: Gary Grant)
 
-![Mockup image](docs/git-header.png)
+![Mockup image](docs/images/git-header.png)
 
 > TODO Wireframe Links
 
-[Live Site](https://bovinehero.com/hunt-showdown/index.html)
+[Live Site](https://bovinehero.com/hunt-showdown/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
 ## Table of Content
 
@@ -45,7 +45,6 @@
 
 ## Project Goals 
 
-
 ### User Goals
 + To allow people to be able to sign up for updates on the game.
 + See example gameplay 
@@ -58,7 +57,6 @@
 + Allow players to buy the game and additional DLC content.
 + Provide a way for new and existing players to contact the company.
 + Deliver information about the game to players.
-
 
 ## User Experience
 
@@ -117,7 +115,7 @@ Initially I looked into building this site desktop first rather than a mobile fi
 
 ### Colour
 
-![image color pallette](docs/palette.svg)
+![image color pallette](docs/images/palette.svg)
 
 Hunt is an atmospheric horror game and so the colour pallette needed to match this dark theme, to enhance the 'hidden threat' and hiding in the shadows aspects of the game a dark background with contrast coming from lighter text was chosen. Highlights on our to calls to action would need to be a single colour addition to break through the light and dark contrasts. 
 
@@ -153,15 +151,25 @@ Additionally there is a 404 page included that will return the website user to t
 Wireframes were created for desktop as a desktop first approach was initially considered. 
 Later iterations of the CSS flipped to mobile first approach, changes were adapted to work with the smaller screen on the fly within limitations of the screen real estate.
 
-TODO - LINKME Home Page Wireframe 
+Home Page Wireframe 
 
-TODO - LINKME  Store Wireframe
+![wireframe image for index page](docs/images/wireframe-index.png)
 
-TODO - LINKME  Gallery Wireframe
+Store Page Wireframe
 
-TODO - LINKME  Sign UP  Wireframe
+![wireframe image for store page](docs/images/wireframe-store.png)
 
-TODO - LINKME  404  Wireframe
+Gallery Page Wireframe
+
+![wireframe image for Gallery page](docs/images/wireframe-gallery.png)
+
+Sign UP  Page Wireframe
+
+![wireframe image for Sign Up page](docs/images/wireframe-signup.png)
+
+404 Page Wireframe
+
+![wireframe image for 404 page](docs/images/wireframe-404.png)
 
 ## Technologies Used
 
@@ -402,7 +410,7 @@ Performance testing was performed on lighthouse in Google Chrome's DevTools
 
 #### index.html
 
-![lighthouse summary image for index page](docs/lighthouse-index.png)
+![lighthouse summary image for index page](docs/images/lighthouse-index.png)
 
 
 Issues:
@@ -415,7 +423,7 @@ Issues:
 
 #### store.html
 
-![lighthouse summary image for store page](docs/lighthouse-store.png)
+![lighthouse summary image for store page](docs/images/lighthouse-store.png)
 
 Issues:
 
@@ -425,7 +433,7 @@ Issues:
 
 #### gallery.html
 
-![lighthouse summary image for gallery page](docs/lighthouse-gallery.png)
+![lighthouse summary image for gallery page](docs/images/lighthouse-gallery.png)
 
 Issues:
 
@@ -437,7 +445,7 @@ Issues:
 
 #### signup.html
 
-![lighthouse summary image for signup page](docs/lighthouse-signup.png)
+![lighthouse summary image for signup page](docs/images/lighthouse-signup.png)
 
 Issues:
 
@@ -610,7 +618,7 @@ Crytek - Creator Hunt: Showdown for inspiring the site.
 
 Ed Bradly - for his insights into flexbox, grid and why mobile first will save you from headaches
 
-Kera Cudmore - for providing insight into readme layout, without it I'd still be typing.
+Kera Cudmore & Ana Runje - for providing insight into readme layouts, without it I'd still be typing.
 
 Stuart Grant - for his ruthless (but fair) feedback of a first attempt at a website.
 
