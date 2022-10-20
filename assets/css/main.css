@@ -10,6 +10,9 @@
   box-sizing: border-box;
 }
 
+
+/* Set background to fill page with black fallback */
+
 body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
@@ -29,6 +32,9 @@ header {
   background-color: rgba(136, 8, 8, 0.9);
 }
 
+
+/* logo text styles */
+
 .logo {
   display: inline-block;
   margin: 1rem;
@@ -37,18 +43,20 @@ header {
   font-size: 1.2rem;
 }
 
+/* style link back home to blend into colour scheme */
+
 .logo a{
   color: blanchedalmond;
   text-decoration: none;
 }
 
+/* Set the nav menu to always be on top, without the z index the hero image will overlap  */
 .nav-menu{
   width: 100%;
   height: 60%;
   overflow: hidden;
   z-index: 2;
 }
-
 .menu a{
     display: block;
     padding: 30px;
@@ -62,6 +70,7 @@ header {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
+
 /* Toggle menu icon */
 .side-menu:checked ~ .nav-menu{
   max-height: 100%;
@@ -69,6 +78,8 @@ header {
 .side-menu:checked ~ .burger .burger-line {
   background: transparent;
 }
+
+/* Animate the burger into an X  */
 .side-menu:checked ~ .burger .burger-line::before {
   transform: rotate(-45deg);
   top:0;
@@ -79,14 +90,14 @@ header {
   top:0;
   z-index: 3;
 }
-/* Menu Icon */
+
+/* Menu Icon location */
 .burger{
   float: right;
   padding: 40px 20px;
 }
 
 /* Style label tag */
-
 .burger-line {
   background: blanchedalmond;
   display: block;
@@ -95,8 +106,7 @@ header {
   width: 24px;
 } 
 
-/* Style span tag */
-
+/* Style burger's span tag */
 .burger-line::before, .burger-line::after{
   background: blanchedalmond;
   content: '';
@@ -115,11 +125,12 @@ header {
   top: -5px;
 }
 
+/* Hide checkbox to achieve effect */
 .side-menu {
   display: none;
-} /* Hide checkbox */
+} 
 
-
+/* Active menu page */
 .active {
   border-bottom: 1px solid;
 }
@@ -129,6 +140,8 @@ header {
   justify-content: center;
 }
 
+/* Outer wrapper for the hero image to act as picture frame  */
+
 #banner-wrapper {
   height: 300px;
   width: 1800px;
@@ -137,6 +150,7 @@ header {
   margin: 20px;
 }
 
+/* Zoom out hero image poditioning and animation */
 #banner-image {
   height: 100%;
   width: 100%;
@@ -146,8 +160,20 @@ header {
   animation-fill-mode: forwards;
   margin: 0 auto;
 }
-/* create the zoom out for banner image */
 
+@keyframes banner-zoom {
+  from {
+      transform: scale(1.4);
+      background-size: cover;
+  }
+
+  to {
+      transform: scale(1.0);
+      background-size: cover;
+  }
+}
+
+/* Animated cover text positioning */
 #banner-cover-text{
   letter-spacing: 4px;
   max-width: 200px;
@@ -176,18 +202,6 @@ header {
   animation-fill-mode: forwards;
 }
 
-@keyframes banner-zoom {
-  from {
-      transform: scale(1.4);
-      background-size: cover;
-  }
-
-  to {
-      transform: scale(1.0);
-      background-size: cover;
-  }
-}
-
 @keyframes banner-cover-colors {
   from{
       opacity: 1;
@@ -198,6 +212,7 @@ header {
   }
 }
 
+/* Set testimonials to flex a header on top of 3 reviews  */
 #testimonials {
   display: flex;
   flex-flow: column wrap;
@@ -234,6 +249,7 @@ header {
   font-size: 1rem;
 }
 
+/* YouTube video iframe styling */
 #media-section {
   display: flex;
   flex-flow: row wrap;
@@ -248,6 +264,7 @@ header {
   border: 0px;
 }
 
+/* Flex stack for text in the products section */
 #product {
   display: flex;
   flex-flow: column wrap;
@@ -255,6 +272,7 @@ header {
   margin: 0 5%;
 }
 
+/* backround color added here as the text visibility is a little obscured by white in the background image */
 #product > div {
   margin: 10px;
   align-self: center;
@@ -275,14 +293,15 @@ header {
   max-width: 1024px;
 }
 
+/* Buy the game flex container */
 #buy-the-game {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-/* Store Page */
 
+/* page intro styles for non index pages */
 .page-intro {
   display: flex;
   flex-flow: column wrap;
@@ -296,12 +315,16 @@ header {
   padding: 0 1rem 1rem 1rem;
 }
 
+/* Store Page */
+
+/* flex stack to create a store shelf */
 #games, #dlc {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
+/* game styling needs to be wider than dlc as only two items in a row */
 .purchase-game {
   margin: 10px;
   max-width: 400px;
@@ -310,6 +333,7 @@ header {
   justify-content: space-between;
 }
 
+/* dlc styling needs to be narrower as many items in a row */
 .purchase-dlc {
   margin: 10px;
   width: 200px;
@@ -318,6 +342,7 @@ header {
   justify-content: space-between;
 }
 
+/* store item "box" with header body image and purchase footer */
 .purchase-header{
   padding: 10px;
   font-size: 1.1rem;
@@ -350,6 +375,7 @@ header {
   text-decoration: none;
 }
 
+/* background images for the store items */
 #std-edition{
   background: url('../images/store/hunt-showdown-game.webp') no-repeat center center, black;
 }
@@ -386,6 +412,7 @@ header {
 
 /* Gallery */
 
+/* lazy column implementation to allow easy add of more columns as screen gets larger via media query */
 #gallery {
   margin-top: 20px;
   line-height: 0;
@@ -393,6 +420,7 @@ header {
   column-gap: 5px;
 }
 
+/* image styling to allow images to take up full column width */
 #gallery img {
   width: 100%;
   height: auto;
@@ -401,6 +429,7 @@ header {
 
 /* Signup */
 
+/* wrapper background for form submission and find us. Flex stack to allow dynamic positioning of the form and find us divs */
 .form-section {
   display: flex;
   justify-content: center;
@@ -412,6 +441,7 @@ header {
   background-position: center;
 }
 
+/* Styling of form and findus to be the same */
 .signup-form, .find-us {
   background-color: rgba(60, 60, 60, 1);
   padding: 10px;
@@ -479,6 +509,8 @@ header {
   color: blanchedalmond;
 }
 
+/* browser specific handlers for placeholder text */
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: blanchedalmond;
   opacity: 0.6; /* Firefox */
@@ -497,6 +529,8 @@ header {
 
 
 /* Footer */
+
+/* flex stack with font awesome icons to push it to the very bottom of the page */
 
 footer {
   display: flex;
@@ -532,6 +566,7 @@ footer {
 
 @media screen and (min-width: 320px) {
   /* 320px Old Mobile devices */
+  /* header and footer font resizes allow it to fit on one line */
   .logo {
     font-size: 1.0rem;
   }
@@ -542,14 +577,18 @@ footer {
 
 @media screen and (min-width: 480px) {
   /* 320px — 480px: Mobile devices */
+  
+  /* header font resize allow it to fit on one line */
   .logo {
     font-size: 1.1rem;
   }
+  /* testimonials switch to flex rows to allow more screen use */
   #testimonials {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
   }
+  /* footer font resize allow it to fit on one line */
   footer {
     font-size: 1rem;
   }
@@ -557,11 +596,13 @@ footer {
 
 @media screen and (min-width: 768px) {
   /* 481px — 768px: iPads, Tablets */
+  /* bigger screen gets bigger video */
   #media-section iframe {
     width: 512px;
     height: 216px;
     margin: 20px;
   }
+  /* bigger screen gets more gallery columns */
   #gallery {
     column-count: 2;
     }
@@ -569,7 +610,8 @@ footer {
 
 @media screen and (min-width: 1024px) {
   /* 769px — 1024px: Small screens, laptop */
-
+  
+  /* bigger screen gets bigger banner plus banner text */
   #banner-wrapper {
     height: 460px;
     width: 1800px;
@@ -596,11 +638,13 @@ footer {
     position: absolute;  
   }
 
+  /* bigger screen gets bigger video */
   #media-section iframe {
     width: 768px;
     height: 432px;
     margin: 20px;
   }
+  /* bigger screen gets more gallery columns */
   #gallery {
     column-count: 3;
   }
@@ -614,20 +658,25 @@ footer {
 
 @media screen and (min-width: 1200px) {
   /* 1025px — 1200px: Desktops, large screens */
+  /* bigger screen gets bigger video */
   #media-section iframe {
     width: 1024px;
     height: 576px;
     margin: 20px;
   }
+  /* bigger screen gets more gallery columns */
   #gallery {
     column-count: 4;
     }
+  
+  /* move the form to the start to allow find us to pop up into same row */
   .form-section {
     justify-content: flex-start;
   }
   .signup-form {
     max-width: 30%;
   }
+  /* due to screen size changes footer now needs to stay at the bottom of the page not bottom of the content */
   footer {
     position: absolute;
   }
@@ -635,17 +684,21 @@ footer {
 
 @media screen and (min-width: 1920px) {
 
+  /* quries here are to spread content out to use more of the screen real estate */
+
+
   #testimonials {
     justify-content: space-evenly;
   }
 
-
+  /* bigger screen gets bigger video */
   #media-section iframe {
     width: 1600px;
     height: 900px;
     margin: 20px;
   }
   
+  /* better positioning on large screens to use more real estate */
   #product {
     margin: 0 20%;
     padding: 20px 0;
@@ -662,6 +715,7 @@ footer {
 }
 
 @media screen and (prefers-reduced-motion) {
+  /* remove movement animations  */
   #banner-image {
       animation-duration: 0s;
     }
