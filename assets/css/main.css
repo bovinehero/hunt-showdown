@@ -462,7 +462,7 @@ header {
   text-decoration: none;
 }
 
-.text-input, .date-input {
+.text-input, .date-input, .email-input {
   background: transparent;
   outline: none;
   width: 100%;
@@ -473,8 +473,12 @@ header {
   color:blanchedalmond;
 }
 
-.text-input:hover, .date-input:hover {
+.text-input:hover, .date-input:hover, .email-input:hover {
   border-color: rgba(136, 8, 8, 1);
+}
+
+.email-link:hover {
+  color: rgba(136, 8, 8, 1);
 }
 
 .text-input:autofill {

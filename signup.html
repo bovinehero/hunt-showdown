@@ -32,7 +32,7 @@
             <p>Sign up for our Hunt: Showdown newsletter or come find us in the Bayou.</p>
         </section>
         <section class="form-section">
-            <!-- the sign up form -->
+            <!-- the sign up form hits the codeinstitute API because there is no real sign up -->
             <form method="post" action="https://formdump.codeinstitute.net/" class="signup-form">
                 <h2><i class="fa-solid fa-hat-cowboy"></i> Sign Up for the Hunt!</h2>
                 
@@ -43,7 +43,7 @@
                 <input class="text-input" type="text" id="lname" name="last_name" placeholder=" Enter your last name...">
                 
                 <label for="email">Email Address:</label>
-                <input class="text-input" type="email" id="email" name="email_address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Must be a valid email format." placeholder=" Enter your email address...">            
+                <input class="email-input" type="email" id="email" name="email_address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Must be a valid email format." placeholder=" Enter your email address...">            
                 
                 <label for="dob">Date of Birth:</label>
                 <input class="date-input" type="date" id="dob" name="dob" required>
@@ -61,7 +61,7 @@
                 </div>
                     <div class="contact-us-footer">
                         <address>
-                            The Bovine Hero. <a href="mailto:webmaster@bovinehero.com" aria-label="Email the Bovine Hero's Webmaster"><i class="fa-regular fa-envelope"></i></a><br>
+                            The Bovine Hero. <a class="email-link" href="mailto:webmaster@bovinehero.com" aria-label="Email the Bovine Hero's Webmaster"><i class="fa-regular fa-envelope"></i></a><br>
                             Visit us at: <a href="https://bovinehero.com" target="_blank" rel="noopener" aria-label="Visit Bovine Hero's Home Page (opens in a new tab)">https://bovinehero.com</a><br>
                             Deep in the Bayou, Lousiana<br>
                             USA<br>
