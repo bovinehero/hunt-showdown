@@ -231,11 +231,13 @@ The website is comprised of five pages, four of which are accessible from the na
 + All Pages on the website have:
 
   + A responsive navigation bar at the top which allows the user to navigate through the site. To the left of the navigation bar is the logo text and to to the right of the navigation bar is an animated CSS hamburger menu which gives access to the website pages. To allow a good user experience of the site, the navigation bar is a minimal height and sticky to allow intra site navigation at any point in scrolling the various pages. The hamburger was implemented to give the site a clean look and to promote a good mobile first user experience, anecdotally users are used to seeing the burger icon when on mobile devices to navigate a site, and because a non javascript burger menu would provide ample practice with CSS animations I adapted code from [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP) to implement the CSS burger.
+    + User Stories Covered: 2
     + Nav menu closed. <br> ![nav menu closed](docs/images/feature-menu-closed.png)
 
     + Nav menu open. <br> ![nav menu open](docs/images/feature-menu-open.png)
 
-  + A footer which contains social media icon links to Facebook, Twitter, YouTube, Instagram, Discord, GitHub and GitLab pages. Additionally there is also a note of copyright for my work. Icons were used to keep the footer clean and tight and because they are universally recognisable.
+  + A footer which contains social media icon links to Facebook, Twitter, YouTube, Instagram, Discord, GitHub and GitLab pages. Additionally there is also a note of copyright for my work. Icons were used to keep the footer clean and tight and because they are universally recognisable. The links out to social media not only provide a way to contact the company but also a way to keep up to date with upcoming events and features.
+    + User Stories Covered: 4, 5, 7, 8, 10
     + Footer. <br> ![nav menu closed](docs/images/feature-footer.png)
 
   +  As this project is part of a portfolio of work hosted on my personal domain of bovinehero.com I included my favicon image from the parent site which thanks to the github hosting engine auto presents itself in the address tab of the website. 
@@ -243,15 +245,18 @@ The website is comprised of five pages, four of which are accessible from the na
 
   + A :cowboy_hat_face: emoji in the title of every page. I did this because game is set in the 1890s Lousisiana cowboys are a part of the theme and more importantly because I can and development without a little whimsy is a job.
 
-  + with the exception of 404.html an external stylesheet __assets/css/main.css__. I chose to follow the scss naming convention of 'main.css' for this as (while not in scope here) in future projects may wish to look at thematic style toggles and varaiblising style settings in future projects.
+  + with the exception of 404.html an external stylesheet __assets/css/main.css__. I chose to follow the scss naming convention of 'main.css' for this as (while not in scope here) in future projects may wish to look at thematic style toggles and varaiblising style settings in future projects. This feature aids in site navigation should a user make a mistake writing a child url in the address bar.
+    + User Stories Covered: 2
 
-  + keyword and description content for SEO as recommended by best practice. (Gallery Example)
+  + keyword and description content for SEO as recommended by best practice (Gallery Example). This aids users in navigating to the correct page from a search engine entry point.
     ``` html
     <meta name="keywords" content="hunt showdown, hunt, huntz">
     <meta name="description" content="Gallery of Concept art and screen captures from Hunt: Showdown as part of Code Institute work">
     ```
+    + User Stories Covered: 2
 
   + An image as a fixed background image with a black fallback to aid with simulating the atmosphere in the game. In smaller screens a scroll down will eventually take a user to the end of the image, but in larger screens it fills it regardless of scrolling position. 
+    + User Stories Covered: 9
 
 + index.html
   
@@ -259,20 +264,29 @@ The website is comprised of five pages, four of which are accessible from the na
     + A big driver in the game is that a single shot can kill and often that shot comes in the dark from an unkown location, both the image and the zoom out we selected to try and achieve this effect.
     + For accessibility this animation is deactivated via a `prefers-reduced-motion` media query in `main.css`
     + The fixed text over the banner image has a colour change to blood red of the `<span>die alone.</span>`, to highlight the frailty your player character has in the game. The transition here is slower and doesn't include motion so the color change persists over reduced motion preference.
+    + User Stories Covered: 9
     + Hero banner: <br> ![hero banner](docs/images/feature-hero-banner.png)
   
-  + Testimonials: a flex row wrapped div with a title and 3 favourable reviews of the game.
+  + Testimonials: a flex row wrapped div with a title and 3 favourable reviews of the game allowing potential buyers to see 3rd party opinions about the game and make an informed decision on purchasing.
+    + User Stories Covered: 1
+    + Testimonials: <br> ![testimonials feature](docs/images/feature-testimonials.png)
   
-  + YouTube Media: The official launch trailer from the youtube site for the game developed by Crytek.
+  + YouTube Media: The official launch trailer from the youtube site for the game developed by Crytek. This media includes in game content directy showing potential buyers the mood, themes and gameplay. 
     + Initially I'd considered a video section here, but the constraints of gitlab and lack of suitable content prompted a flip into using a YouTube iframe for the media section. 
     + As an exteranl resource I added in `loading="lazy"` to tag the iframe as a non-blocking asset and make it load only as needed.
     + The resolution sizes for the base iframe I implemented as a default 16:9 (as per the source video) and incremented the pixel sizes up through multiples of this ratio from 384px by 216px to 1600px by 900px in subsequent media screen sizes. This way the user sees a good portion of the content creator's video cover in their screen.
+    + User Stories Covered: 1, 9
+    + YouTube iFrame Video: <br> ![YouTube iframe feature](docs/images/feature-youtube-video.png)
   
   + Product Description: the main text description of Hunt: Showdown from the publisher's [store](https://eu-shop.crytek.com/games/hunt-showdown) stylised responsivley to fit within the site. 
     + Following the natural flow of the site, after some attention grabbing multi-media content this part explains to the user what the game is and how it works. This section uses a flex column to center the content.
+    + User Stories Covered: 1, 9
+    + Product Description: <br> ![Product Description Feature](docs/images/feature-product-description.png)
 
-  + Purchase Links: This is the call to action of the page, where upon viewing the content a new player consumer will be inspired to purchasing the game.
+  + Purchase Links: This is the call to action of the page, where upon viewing the content a new player consumercan go out to the crytek or steam store and purchase the game.
     + The code here is a re-implemetation of the code in the __Purchase Game__ section of the store page.
+    + User Stories Covered: 3
+    + Game Purchase: <br> ![Game Purchase Feature](docs/images/feature-game-purchase.png)
 
 + store.html 
 
@@ -283,14 +297,16 @@ The website is comprised of five pages, four of which are accessible from the na
     + On larger screens this is presented as 2 distinct rows, but the use of flex wrap ensures that on smaller screens this moves naturally into a column view without the need to refactor.
     + For the DLC items I elected for fixed narrower width so that the text and background image for the store item would remain consistent within screen sizes and to allow a bit more content on a row.
     + I wanted the game purchase boxes to be fairly large on the page to consume more real estate on a row in both the index and store pages. However the available image sizes limited the box sizes to around 400px (double the width) of the DLC components.
+    + User Stories Covered: 3, 6
     + Game Purchase: <br> ![Game Purchase Feature](docs/images/feature-game-purchase.png)
     + DLC Purchase: <br> ![DLC Purchase Feature](docs/images/feature-dlc-purchase.png)
 
 + gallery.html
 
-  + Assorted image size gallery: a composed of of various media from a press pack download the official Hunt Showdown [site](https://www.huntshowdown.com/media) arranged into a column defined section.
+  + Assorted image size gallery: a composed of of various media from a press pack download the official Hunt Showdown [site](https://www.huntshowdown.com/media) arranged into a column defined section. This gives players a feel for the games themes.
     + I implemented a column-gap in the section to provide horizontal spacing and set the image widths to be 100% of the column in order to make resizing easy for a single image source.
     + Smaller screens recieve a single column containing pictures as the default, screen resolutions increase the number of columns gradually increase to 4 via use of media queries, ensuring the gallery consumes more of the screen as it gets larger.
+    + User Stories Covered: 9
     + Gallery in narrow (portrait) view: <br> ![Gallery in portrait view](docs/images/feature-gallery-portrait.png)
     + Gallery in wide (landscape) view: <br> ![Gallery in landscape view](docs/images/feature-gallery-landscape.png)
 
@@ -303,19 +319,22 @@ The website is comprised of five pages, four of which are accessible from the na
       + As the viewing port becomes larger we use proportionally reduce the max-width in the media queries to avoid making the form look stretched accross the section. - By the time we get to the largest screen sizes, we have a small form on the left and can view the entire background picture in the section. 
     + The form uses client side validation for the email address via the following regex: `pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"`
     + The submitters Name is not required as this constitutes PII, which we don't need in order to send someone an email style news letter. PII needs robust data handling practices, this ids an overhead I do not want to manage at this stage.
+    + User Stories Covered: 4, 7
     + Newsletter Signup form: <br> ![Sign up form](docs/images/feature-signup-form.png)
 
   + Map & Contact Us:
     + This feature was a late addition to the project based on user feedback and was added to the form section prompting a refactor from point positioning to flex
     + There is a mailto link as well as a google maps iframe import to a location deep in the Louisana Bayou, whee the game takes place.
+    + User Stories Covered: 5, 10
     + Map & contact us: <br> ![Map and contact us](docs/images/feature-map.png)
 
 
 + 404.html
 
-  + Leverages the github pages jekyll engine to provide a custom 404 experience for users. 
+  + Leverages the github pages jekyll engine to provide a custom 404 experience for users and return users back to the site if they end up in a non-existent child domain.
     + Styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
-    + Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if non-existant child directories are inputted into the url.
+    + Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/hunt-showdown/index.html](https://bovinehero.com/hunt-showdown/index.html) as relative referencing will not guarantee a return to the home page if non-existent child directories are inputted into the url.
+    + User Stories Covered: 2
     + Link back home: <br> ![return to the home page](docs/images/feature-404.png)
 
 ### Future Implementations
@@ -487,7 +506,6 @@ Issues:
 | Performance | Map IFrame | Does not use passive listeners to improve scrolling performance | Does not use passive listeners to improve scrolling performance | Imported from the video, this is a JavaScript optimization, beyond scope of project |
 
 
-
 ### Device testing
 The website was tested on the following devices:
 
@@ -511,13 +529,46 @@ The website was tested on the following browsers:
 | Gallery | Navigate to the Gallery Page and scroll up and down | gallery images are rendered visible in the screen for a variety of screen sizes  | Works as expected |
 | YouTube Video | Navigate to index page scroll to YouTube video and click on it | YouTube player should start the video with imbedded YouTube controls | Works as expected |
 | Product Description | Navigate to index page scroll to product description section | text describing the game should be legible on a a variety of screen sizes  | Works as expected |
-| Product Testamonials | Navigate to index page scroll to testamonials section | citations with product reviews be legible on a a variety of screen sizes| Works as expected |
+| Product Testimonials | Navigate to index page scroll to testimonials section | citations with product reviews be legible on a a variety of screen sizes| Works as expected |
+
+<br>
+<details>
+<summary>Gallery Results</summary>
+<br>
+<img alt="Gallery Test Results" src="docs/images/testing-gallery.gif">
+</details>
+<br>
+<details>
+<summary>YouTube Video Results</summary>
+<br>
+<img alt="YouTube Video Test Results" src="docs/images/testing-youtube-video.gif">
+</details>
+<br>
+<details>
+<summary>Product Description Results</summary>
+<br>
+<img alt="Product Description Test Results" src="docs/images/testing-product-description.gif">
+</details>
+<br>
+<details>
+<summary>Product Testimonials Results</summary>
+<br>
+<img alt="Product Testimonials Test Results" src="docs/images/testing-product-testimonials.gif">
+</details>
+<br>
 
 2. As a __First Time Visitor__, I want to be able to navigate the site easily to find information.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Header Nav Menu | At anytime click on the header hamburger menu when scrolling up or down on any page | display nav links to the other pages | Works as expected |
+
+<details>
+<summary>Nav Menu Results</summary>
+<br>
+<img alt="Nav Menu Test Results" src="docs/images/testing-nav-menu.gif">
+</details>
+<br>
 
 3. As a __First Time Visitor__, I would like to be able to be able to go and purchase this game from the site.
 
@@ -527,6 +578,25 @@ The website was tested on the following browsers:
 | Game Edition Purchase | Navigate to the Store Page and DLC section, click on the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
 | DLC Purchase | Navigate to the Store Page and DLC section, click on the the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
 
+<details>
+<summary>Home Page Purchase Results</summary>
+<br>
+<img alt="Home Page Purchase Test Results" src="docs/images/testing-home-purchase-game.gif">
+</details>
+<br>
+<details>
+<summary>Store Page Purchase Game Results</summary>
+<br>
+<img alt="Store Page Purchase Test Results" src="docs/images/testing-store-purchase-game.gif">
+</details>
+<br>
+<details>
+<summary>Store Page Purchase DLC Results</summary>
+<br>
+<img alt="Store Page Purchase Test Results" src="docs/images/testing-store-purchase-dlc.gif">
+</details>
+<br>
+
 
 4. As a __First Time Visitor__, I would like to be informed of upcoming events, features and community events.
 
@@ -534,6 +604,20 @@ The website was tested on the following browsers:
 |-------------|------------|---------------------|-------------------|
 | Sign Up for the Hunt! form | Navigate to the Join the Posse! (Sign Up) Page and locate the Sign Up for the Hunt! form, fill out and submit | Data submited via contact form | Works as expected |
 | Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where live updates can be found | Works as expected |
+
+<details>
+<summary>Sign Up Form Results</summary>
+<br>
+<img alt="Sign Up Form Test Results" src="docs/images/testing-signup.gif">
+</details>
+<br>
+<details>
+<summary>Footer Results</summary>
+<br>
+<img alt="Footer Test Results" src="docs/images/testing-footer.gif">
+</details>
+<br>
+
 
 5. As a __First Time Visitor__, I would like to be able to contact the company
 
@@ -543,12 +627,41 @@ The website was tested on the following browsers:
 | Email | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the email icon | If email client is installed, draft an email should appear |  Works as expected |
 | Map | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the map | User can explore the area near the address on google maps |  Works as expected |
 
+Testing Results for Footer are the same as User Story 4
+
+<details>
+<summary>Footer Results</summary>
+<br>
+<img alt="Footer Test Results" src="docs/images/testing-footer.gif">
+</details>
+<br>
+<details>
+<summary>Email Results</summary>
+<br>
+<img alt="Email Test Results" src="docs/images/testing-email.gif">
+</details>
+<br>
+<details>
+<summary>Map Results</summary>
+<br>
+<img alt="Map Test Results" src="docs/images/testing-map.gif">
+</details>
+<br>
 
 6. As a __Returning Player__, I would like to be able to be able to go and purchase additional content for this game from the site.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | DLC Purchase | Navigate to the Store Page and DLC section, click on the __purchase__ block | Link opens in a new tab to a store where a purchase of the item can be made | Works as expected |
+
+Testing Results are the same as the DLC purchase feature in User Story 3
+
+<details>
+<summary>Store Page Purchase DLC Results</summary>
+<br>
+<img alt="Store Page Purchase Test Results" src="docs/images/testing-store-purchase-dlc.gif">
+</details>
+<br>
 
 7. As a __Returning Player__, I would like to be informed of upcoming events, features and community events
 
@@ -557,12 +670,42 @@ The website was tested on the following browsers:
 | Sign Up for the Hunt! form | Navigate to the Join the Posse! (Sign Up) Page and locate the Sign Up for the Hunt! form, fill out and submit | Data submited via contact form | Works as expected |
 | Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where live updates can be found | Works as expected |
 
+Testing Results are the same as User Story 4
+
+<details>
+<summary>Sign Up Form Results</summary>
+<br>
+<img alt="Sign Up Form Test Results" src="docs/images/testing-signup.gif">
+</details>
+<br>
+<details>
+<summary>Footer Results</summary>
+<br>
+<img alt="Footer Test Results" src="docs/images/testing-footer.gif">
+</details>
+<br>
+
 8. As the __Site Owner__, I want users to find news about upcoming events or changes in the game
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Sign Up for the Hunt! form | Navigate to the Join the Posse! (Sign Up) Page and locate the Sign Up for the Hunt! form, fill out and submit | Data submited via contact form | Works as expected |
 | Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media | Works as expected |
+
+Testing Results are the same as User Story 4
+
+<details>
+<summary>Sign Up Form Results</summary>
+<br>
+<img alt="Sign Up Form Test Results" src="docs/images/testing-signup.gif">
+</details>
+<br>
+<details>
+<summary>Footer Results</summary>
+<br>
+<img alt="Footer Test Results" src="docs/images/testing-footer.gif">
+</details>
+<br>
 
 9. As the __Site Owner__, I want users to be able to get a feel for the game's themes
 
@@ -571,7 +714,34 @@ The website was tested on the following browsers:
 | Gallery | Navigate to the Gallery Page and scroll up and down | gallery images are rendered visible in the screen for a variety of screen sizes  | Works as expected |
 | YouTube Video | Navigate to index page scroll to YouTube video and click on it | YouTube player should start the video with imbedded YouTube controls | Works as expected |
 | Product Description | Navigate to index page scroll to product description section | text describing the game should be legible on a a variety of screen sizes  | Works as expected |
-| Product Testamonials | Navigate to index page scroll to testamonials section | citations with product reviews be legible on a a variety of screen sizes| Works as expected |
+| Product testimonials | Navigate to index page scroll to testimonials section | citations with product reviews be legible on a a variety of screen sizes| Works as expected |
+
+Testing Results are the same as User Story 1
+
+<details>
+<summary>Gallery Results</summary>
+<br>
+<img alt="Gallery Test Results" src="docs/images/testing-gallery.gif">
+</details>
+<br>
+<details>
+<summary>YouTube Video Results</summary>
+<br>
+<img alt="YouTube Video Test Results" src="docs/images/testing-youtube-video.gif">
+</details>
+<br>
+<details>
+<summary>Product Description Results</summary>
+<br>
+<img alt="Product Description Test Results" src="docs/images/testing-product-description.gif">
+</details>
+<br>
+<details>
+<summary>Product Testimonials Results</summary>
+<br>
+<img alt="Product Testimonials Test Results" src="docs/images/testing-product-testimonials.gif">
+</details>
+<br>
 
 10. As the __Site Owner__, I want the users to be able to contact us
 
@@ -579,6 +749,31 @@ The website was tested on the following browsers:
 |-------------|------------|---------------------|-------------------|
 | Footer |  Navigate to the bottom of any page and click on a social media icon | open a link to social media where customers can engage | Works as expected |
 | Email | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the email icon | If email client is installed, draft an email should appear |  Works as expected |
+| Map | Navigate to the Join the Posse! (Sign Up) Page and locate the Find us in the Bayou Map, click on the map | User can explore the area near the address on google maps |  Works as expected |
+
+Testing Results for Footer are the same as User Story 4
+
+<details>
+<summary>Footer Results</summary>
+<br>
+<img alt="Footer Test Results" src="docs/images/testing-footer.gif">
+</details>
+<br>
+
+Testing Results for Email and Map are the same as User Story 5
+
+<details>
+<summary>Email Results</summary>
+<br>
+<img alt="Email Test Results" src="docs/images/testing-email.gif">
+</details>
+<br>
+<details>
+<summary>Map Results</summary>
+<br>
+<img alt="Map Test Results" src="docs/images/testing-map.gif">
+</details>
+<br>
 
 
 ## Bugs
@@ -635,7 +830,7 @@ Love Running for inspiration on the Sign UP form and animation primer on hero ba
 
 ### Content
 Text Content for the website was written by the Crytek Employees and was ourced from the store [Page](https://eu-shop.crytek.com/games/hunt-showdown).
-Block quotes for testamonials are cited within the web documents.
+Block quotes for testimonials are cited within the web documents.
 
 ### Media
 Images from the official Hunt Showdown [site](https://www.huntshowdown.com/media) presspack
